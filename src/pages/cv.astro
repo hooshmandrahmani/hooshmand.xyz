@@ -1,0 +1,322 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="CV" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Curriculum Vitae</div>
+    <p class="py-2 opacity-80">
+      A complete record of my education, research, publications, teaching, awards, and
+      technical skills.
+    </p>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <a
+        class="btn btn-sm"
+        href="/CV__Rahmani__Hooshmand.pdf"
+        target="_blank"
+        rel="noopener">View PDF</a
+      >
+      <a class="btn btn-sm btn-outline" href="/CV__Rahmani__Hooshmand.pdf" download
+        >Download PDF</a
+      >
+    </div>
+  </div>
+
+  <div class="divider my-2"></div>
+
+  <!-- Profile -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+  <div class="mb-10 text-justify">
+    I'm a PhD researcher in Business Analytics and Operations Management at Sabanci
+    University, with a background in industrial engineering. My work focuses on
+    mathematical modelling and data-driven decision systems. My research spans robust
+    optimization, stochastic modelling, integer programming, and machine learning, with
+    applications in healthcare operations, sustainable supply chains, and remanufacturing
+    systems.
+  </div>
+
+  <!-- Education -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="PhD — Business Analytics & Operations Management"
+      subtitle="Sep 2024 — Present · Sabanci Business School, Sabanci University · Istanbul, Türkiye · GPA 3.5 / 4.00 · Full Scholarship"
+    >
+      <strong>Coursework:</strong> Modelling in Operations Management · Stochastic
+      Processes · Data Mining · Operations and Decision Analytics · Empirical Methods in
+      Operations Management · Data and AI Ethics · Philosophy of Science and Society ·
+      Judgment and Decision Making · Probability and Statistics · Operations Research.
+    </TimeLineElement>
+    <TimeLineElement
+      title="MSc — Industrial Engineering"
+      subtitle="Sep 2018 — Sep 2021 · Iran University of Science and Technology · Tehran, Iran · GPA 18.33 / 20.00 · Fellowship recipient"
+    >
+      <strong>Thesis:</strong> Multi-objective robust optimization model for
+      remanufacturing under uncertain quality and time. Supervisor: Dr. Ahmad Makui.<br />
+      <strong>Coursework:</strong> Game Theory · Econometrics · Operations Research ·
+      Uncertain Programming (Robust Optimization) · Fuzzy Theory and Applications · Network
+      Theory · Systems Engineering · Computer Simulation and Optimization.
+    </TimeLineElement>
+    <TimeLineElement
+      title="BSc — Engineering"
+      subtitle="Sep 2013 — Sep 2017 · Amirkabir University of Technology · Tehran, Iran · Fellowship recipient · Top 2% in Iran's University Entrance Exam"
+    >
+      <strong>Thesis:</strong> Statistical risk assessment in mines. Supervisor: Dr. Kourosh
+      Shahriar.
+    </TimeLineElement>
+  </div>
+
+  <!-- Working Papers -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Working Papers</div>
+  </div>
+  <ul class="list-disc mx-6 mb-10 grid gap-3">
+    <li>
+      <strong
+        >Multi-objective robust optimization model for hybrid manufacturing and
+        remanufacturing planning under uncertainty.</strong
+      >
+      <div class="text-sm opacity-70">
+        H. Rahmani, A. Makui — <em>Working paper · In progress</em>
+      </div>
+    </li>
+    <li>
+      <strong
+        >Green closed-loop supply chain model for remanufacturing to reduce waste and its
+        environmental impacts with Robust Fuzzy Stochastic Programming.</strong
+      >
+      <div class="text-sm opacity-70">
+        H. Rahmani, A. Makui — <em>Working paper · In progress</em>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Research Experience -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Research Experience</div>
+  </div>
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Robust Optimization for Integrated Healthcare Scheduling"
+      subtitle="Jan 2026 · Sabanci University · Supervisor: Dr. Burak Gokgur"
+    >
+      Formulated an MILP model with budgeted uncertainty in Python (Gurobi) to co-optimize
+      surgical planning and nurse assignment, preventing staff workload violations during
+      stochastic demand spikes.
+    </TimeLineElement>
+    <TimeLineElement
+      title="The Integrated Healthcare Timetabling Problem — A Review of Optimization Models and Solution Methods"
+      subtitle="Oct 2025 · Sabanci University · PhD Summer Paper · Supervisor: Dr. Can Akkan"
+    >
+      Literature review synthesizing foundational metaheuristics and optimization models
+      for integrated, dynamic hospital scheduling.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Next-Basket Prediction using Bidirectional Transformers with Data Augmentation"
+      subtitle="Jun 2025 · Sabanci University · Supervisor: Dr. Yucel Saygin"
+    >
+      Improved an e-commerce recommendation system by applying a bidirectional Transformer
+      and data augmentation to better capture customer shopping patterns and predict next
+      purchases.
+    </TimeLineElement>
+    <TimeLineElement
+      title="An Empirical Study on Consumer Trust and Willingness-to-Pay"
+      subtitle="Jun 2025 · Sabanci University · Supervisor: Dr. Melek Akın Ateş"
+    >
+      Designed an empirical study using Structural Equation Modeling to analyze green
+      trust's mediating role in sustainable technology purchasing behavior.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Customer Lifetime Value Assessment via K-Means Clustering"
+      subtitle="Jan 2025 · Sabanci University · Supervisor: Dr. Kemal Kılıç"
+    >
+      Combined traditional RFM modeling with weighted K-Means clustering to predict
+      customer lifetime value across e-commerce segments.
+    </TimeLineElement>
+    <TimeLineElement
+      title="MSc Thesis — Multi-objective Robust Optimization for Remanufacturing"
+      subtitle="Sep 2021 · Iran University of Science and Technology · Supervisor: Dr. Ahmad Makui"
+    >
+      Developed a multi-objective optimization model for hybrid manufacturing and
+      remanufacturing planning under uncertainty. Modeled uncertainty in the quality and
+      quantity of returned products, production times, and demand to enhance strategic
+      planning in closed-loop supply chains.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Blockchain-Based Verification Frameworks for Supply Chain Transparency"
+      subtitle="Jan 2023 · Iran University of Science and Technology · Supervisor: Dr. Morteza Ghomi-Avili"
+    >
+      Evaluated blockchain frameworks to enhance supply chain transparency, utilizing
+      decentralized digital records to ensure product originality and streamline partner
+      verification.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Large-Scale Optimization of Healthcare Logistics via Benders Decomposition"
+      subtitle="Dec 2019 · Iran University of Science and Technology · Supervisor: Dr. Hadi Sahebi"
+    >
+      Implemented a Benders decomposition algorithm in GAMS to efficiently solve a complex
+      optimization model for blood supply chain distribution.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Review of Data-Driven Robust Optimization Methodologies"
+      subtitle="Dec 2019 · Iran University of Science and Technology · Supervisor: Dr. Mir Saman Pishvaee"
+    >
+      Evaluated major data-driven robust optimization frameworks, analyzing methodologies
+      for integrating empirical data into uncertainty sets for complex decision-making
+      environments.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Analytical Approaches in Multi-Modal Transportation Systems"
+      subtitle="Jun 2019 · Iran University of Science and Technology · Supervisor: Dr. Mahdi Hosseini-Motlagh"
+    >
+      Reviewed analytical and optimization approaches for multi-modal transportation,
+      assessing their strategic relevance in complex logistics and transportation planning.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Discrete-Event Queueing Simulation for Transportation Systems"
+      subtitle="Jan 2019 · Iran University of Science and Technology · Supervisor: Dr. Kamran Shahanaghi"
+    >
+      Developed an Arena simulation model to evaluate system-wide transportation
+      performance, analyze queue dynamics, and identify operational bottlenecks.
+    </TimeLineElement>
+  </div>
+
+  <!-- Teaching -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Teaching Experience</div>
+  </div>
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Graduate Teaching Assistant — Sabanci Business School"
+      subtitle="Sep 2024 — Present · Sabanci University · Over 250 students"
+    >
+      <ul class="list-disc ml-5">
+        <li>MKTG 560 — Applications in Digital Marketing (MBA) · Jan — Jun 2026</li>
+        <li>BAN 801 — Marketing Analytics (MBA) · Jan — Jun 2026</li>
+        <li>MGMT 201 — Introduction to Management (110 undergrads) · Sep 2025 — Jan 2026</li>
+        <li>MGMT 402 — Entrepreneurship (30 undergrads) · Jan — Jun 2025</li>
+        <li>MGMT 201 — Introduction to Management (52 undergrads) · Jan — Jun 2025</li>
+        <li>OPIM 501 — Operations & Supply Chain Management (27 MBA) · Sep 2024 — Jan 2025</li>
+        <li>OPIM 390 — Introduction to Business Analytics (21 undergrads) · Sep 2024 — Jan 2025</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Graduate Teaching Assistant — School of Industrial Engineering"
+      subtitle="Jan 2019 — Jun 2024 · Iran University of Science and Technology · Over 70 students"
+    >
+      <ul class="list-disc ml-5">
+        <li>Research — Thesis advising for graduate students · Oct 2021 — Jun 2024</li>
+        <li>IE 201 — Engineering Economics (37 undergrads) · Jan — Jun 2019</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <!-- Skills -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 mb-10">
+    <div>
+      <div class="font-semibold mb-1">Methodology</div>
+      <div class="opacity-80 text-sm">
+        Robust Optimization · Stochastic Modelling · Data-driven Optimization · Integer
+        Programming · Machine Learning · Experimental Design · Empirical Methods
+      </div>
+    </div>
+    <div>
+      <div class="font-semibold mb-1">Programming</div>
+      <div class="opacity-80 text-sm">Python · R · MATLAB · Stata</div>
+    </div>
+    <div>
+      <div class="font-semibold mb-1">Optimization Tools</div>
+      <div class="opacity-80 text-sm">Gurobi · GAMS · CPLEX</div>
+    </div>
+    <div>
+      <div class="font-semibold mb-1">Analytics & Engineering</div>
+      <div class="opacity-80 text-sm">
+        Minitab · Vensim · SmartPLS · Arena · EViews · @Risk · Bizagi · Best Fit
+      </div>
+    </div>
+    <div>
+      <div class="font-semibold mb-1">Reporting</div>
+      <div class="opacity-80 text-sm">LaTeX · Microsoft Office</div>
+    </div>
+  </div>
+
+  <!-- Test scores -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Test Scores</div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-4 mb-10">
+    <div class="border border-base-300 rounded p-4">
+      <div class="text-2xl font-bold">105</div>
+      <div class="font-medium">TOEFL iBT</div>
+      <div class="text-sm opacity-70">R 28 · L 28 · S 25 · W 24 · Aug 2024</div>
+    </div>
+    <div class="border border-base-300 rounded p-4">
+      <div class="text-2xl font-bold">311</div>
+      <div class="font-medium">GRE General</div>
+      <div class="text-sm opacity-70">Q 167 · V 144 · AW 3.0 · Nov 2022</div>
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Languages</div>
+  </div>
+  <ul class="list-disc mx-6 mb-10 grid md:grid-cols-2 gap-1">
+    <li>Persian — Native</li>
+    <li>Kurdish — Native</li>
+    <li>English — Fluent</li>
+    <li>Turkish — Basic</li>
+    <li>Italian — Basic</li>
+  </ul>
+
+  <!-- Honors & Awards -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Honors & Awards</div>
+  </div>
+  <ul class="list-disc mx-6 mb-10 grid gap-1">
+    <li>Sabanci Business School Full Scholarship, PhD — Sep 2024</li>
+    <li>Ranked 4th among all graduate students, School of Industrial Engineering, IUST — Sep 2020</li>
+    <li>IUST Fellowship, master's degree — Sep 2018</li>
+    <li>Top 0.5% in Iran's Graduate Entrance Exam (Industrial Engineering) — Jul 2018</li>
+    <li>Amirkabir University of Technology Fellowship, bachelor's degree — Sep 2013</li>
+    <li>Top 2% among 252,000 in Iran's University Entrance Exam — Aug 2013</li>
+  </ul>
+
+  <!-- Hobbies -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Hobbies & Interests</div>
+  </div>
+  <div class="mb-10 opacity-80">
+    Tennis · Running · Photography · Kamancheh · Tar · Setar
+  </div>
+
+  <!-- References -->
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">References</div>
+  </div>
+  <ul class="list-disc mx-6 mb-10 grid gap-3">
+    <li>
+      <strong>Ahmad Makui, PhD</strong> — Professor<br />
+      Iran University of Science and Technology · School of Industrial Engineering<br />
+      <span class="text-sm opacity-80">amakui@iust.ac.ir</span>
+    </li>
+    <li>
+      <strong>Mir Saman Pishvaee, PhD</strong> — Professor<br />
+      Iran University of Science and Technology · School of Industrial Engineering<br />
+      <span class="text-sm opacity-80">pishvaee@iust.ac.ir</span>
+    </li>
+    <li>
+      <strong>Morteza Ghomi-Avili, PhD</strong> — Graduate Research Assistant<br />
+      Sharif University of Technology · School of Industrial Engineering<br />
+      <span class="text-sm opacity-80">morteza.ghomi@sharif.edu</span>
+    </li>
+  </ul>
+</BaseLayout>

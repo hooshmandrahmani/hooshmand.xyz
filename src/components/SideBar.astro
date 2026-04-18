@@ -1,0 +1,33 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import SideBarMenu from "./SideBarMenu.astro";
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-5 mb-2">
+      <a href="/">
+        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+          <div class="w-[8.5rem] mask mask-circle bg-base-300 overflow-hidden">
+            <img
+              src="/portrait.jpg"
+              alt="Hooshmand Rahmani"
+              class="w-full h-full object-cover"
+              onerror="this.onerror=null; this.src='/profile.webp';"
+            />
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mb-5 px-3">
+      <div class="font-semibold text-base-content">Hooshmand Rahmani</div>
+      <div class="text-xs opacity-70 mt-1 leading-snug">
+        PhD Researcher · Business Analytics & Operations Management · Sabanci University
+      </div>
+    </div>
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    <SideBarFooter />
+  </aside>
+</div>
