@@ -7,24 +7,38 @@ import createSlug from "../lib/createSlug";
 const projects = (await getCollection("projects")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const categories = [
+  { label: "Optimization", slug: "optimization" },
+  { label: "Machine Learning", slug: "machine-learning" },
+  { label: "Supply Chain", slug: "supply-chain" },
+];
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Research Experience & Projects</div>
     <p class="py-2 opacity-80">
-      Selected research, optimization, and analytics work. Each entry has its own page with more detail — add a new one by dropping a Markdown file into <code class="text-sm">src/content/projects/</code>.
+      Selected research, optimization, and analytics work.
     </p>
+    <div class="flex flex-wrap gap-2 mt-3">
+      {categories.map((c) => (
+        <a href={`/projects/${c.slug}`} class="btn btn-sm btn-outline">{c.label}</a>
+      ))}
+    </div>
   </div>
 
-  {
-    projects.length === 0 ? (
-      <div class="bg-base-200 border-l-4 border-secondary w-full p-4">
-        <p class="font-bold">No projects yet</p>
-      </div>
-    ) : (
-      <ul>
-        {projects.map((project) => (
+  <div class="divider my-2"></div>
+
+  {categories.map((cat) => {
+    const catProjects = projects.filter((p) => p.data.category === cat.label);
+    if (catProjects.length === 0) return null;
+    return (
+      <>
+        <div class="text-2xl font-bold mt-8 mb-3">
+          <a href={`/projects/${cat.slug}`} class="hover:underline">{cat.label}</a>
+        </div>
+        {catProjects.map((project) => (
           <>
             <HorizontalCard
               title={project.data.title}
@@ -38,7 +52,7 @@ const projects = (await getCollection("projects")).sort(
             <div class="divider my-0" />
           </>
         ))}
-      </ul>
-    )
-  }
+      </>
+    );
+  })}
 </BaseLayout>

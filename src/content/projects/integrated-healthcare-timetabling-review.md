@@ -2,7 +2,7 @@
 title: "The Integrated Healthcare Timetabling Problem — A Review"
 description: "PhD Summer Paper. A literature review synthesizing foundational metaheuristics and optimization models for integrated, dynamic hospital scheduling."
 pubDate: "2025-10-01"
-category: "Literature Review"
+category: "Optimization"
 institution: "Sabanci University"
 supervisor: "Dr. Can Akkan"
 tags: ["Literature Review", "Scheduling", "Metaheuristics"]

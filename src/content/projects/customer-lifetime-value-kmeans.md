@@ -2,7 +2,7 @@
 title: "Customer Lifetime Value Assessment via K-Means Clustering"
 description: "Combined traditional RFM modeling with weighted K-Means clustering to predict customer lifetime value across e-commerce segments."
 pubDate: "2025-01-01"
-category: "Analytics"
+category: "Machine Learning"
 institution: "Sabanci University"
 supervisor: "Dr. Kemal Kılıç"
 tags: ["K-Means", "RFM", "Clustering"]

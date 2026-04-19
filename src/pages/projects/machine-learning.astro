@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../../lib/createSlug";
+
+const projects = (await getCollection("projects"))
+  .filter((p) => p.data.category === "Machine Learning")
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Machine Learning" sideBarActiveItemID="projects-ml">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Machine Learning</div>
+    <p class="py-2 opacity-80">
+      Data-driven models, deep learning, clustering, and empirical analysis.
+    </p>
+    <a href="/projects" class="text-sm opacity-60 hover:opacity-100">← All projects</a>
+  </div>
+
+  <div class="divider my-2"></div>
+
+  {projects.map((project) => (
+    <>
+      <HorizontalCard
+        title={project.data.title}
+        img={project.data.heroImage}
+        desc={project.data.description}
+        url={"/projects/" + createSlug(project.data.title, project.slug)}
+        target="_self"
+        badge={project.data.badge}
+        tags={project.data.tags}
+      />
+      <div class="divider my-0" />
+    </>
+  ))}
+</BaseLayout>

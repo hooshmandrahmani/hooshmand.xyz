@@ -2,7 +2,7 @@
 title: "MSc Thesis — Multi-objective Robust Optimization for Remanufacturing"
 description: "Multi-objective optimization model for hybrid manufacturing and remanufacturing planning under uncertainty in return quality, production times, and demand."
 pubDate: "2021-09-01"
-category: "MSc Thesis"
+category: "Supply Chain"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
 tags: ["Robust Optimization", "Multi-objective", "Remanufacturing"]

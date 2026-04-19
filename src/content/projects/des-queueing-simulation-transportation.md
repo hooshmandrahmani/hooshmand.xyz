@@ -2,7 +2,7 @@
 title: "Discrete-Event Queueing Simulation for Transportation Systems"
 description: "Developed an Arena simulation model to evaluate system-wide transportation performance, analyze queue dynamics, and identify operational bottlenecks."
 pubDate: "2019-01-01"
-category: "Simulation"
+category: "Supply Chain"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Kamran Shahanaghi"
 tags: ["Arena", "DES", "Queueing"]
