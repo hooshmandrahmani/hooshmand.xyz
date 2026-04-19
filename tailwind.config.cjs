@@ -4,10 +4,46 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [require("@tailwindcss/typography"),require("daisyui")],
+	plugins: [require("@tailwindcss/typography"), require("daisyui")],
 	daisyui: {
-		themes: true, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
-		darkTheme: "dark", // name of one of the included themes for dark mode
-		logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
-	  }
-}
+		themes: [
+			{
+				hooshmand: {
+					"color-scheme": "light",
+
+					// Navy from the lion logo favicon
+					"primary":          "#1B2A44",
+					"primary-content":  "#ffffff",
+
+					"secondary":        "#2E4870",
+					"secondary-content":"#ffffff",
+
+					"accent":           "#4A72AA",
+					"accent-content":   "#ffffff",
+
+					"neutral":          "#1B2A44",
+					"neutral-content":  "#ffffff",
+
+					// Backgrounds
+					"base-100": "#ffffff",       // main page background
+					"base-200": "#F0F2F7",       // sidebar / card background
+					"base-300": "#DDE2EE",       // borders, dividers
+
+					// Main text — dark navy so it reads cleanly on white
+					"base-content": "#1B2A44",
+
+					"info":    "#3B82F6",
+					"success": "#22C55E",
+					"warning": "#F59E0B",
+					"error":   "#EF4444",
+
+					"info-content":    "#ffffff",
+					"success-content": "#ffffff",
+					"warning-content": "#000000",
+					"error-content":   "#ffffff",
+				},
+			},
+		],
+		logs: false,
+	},
+};
