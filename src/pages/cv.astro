@@ -294,13 +294,13 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Test Scores</div>
   </div>
-  <div class="flex gap-8 mb-10 text-center">
-    <div class="flex-1">
+  <div class="flex gap-4 mb-10 text-center">
+    <div class="flex-1 bg-base-200 rounded-xl py-6 px-4">
       <div class="text-4xl font-bold">105</div>
       <div class="font-medium mt-1">TOEFL iBT</div>
       <div class="text-sm opacity-50 mt-1">R 28 · L 28 · S 25 · W 24<br/>Aug 2024</div>
     </div>
-    <div class="flex-1">
+    <div class="flex-1 bg-base-200 rounded-xl py-6 px-4">
       <div class="text-4xl font-bold">311</div>
       <div class="font-medium mt-1">GRE General</div>
       <div class="text-sm opacity-50 mt-1">Q 167 · V 144 · AW 3.0<br/>Nov 2022</div>
@@ -311,26 +311,30 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Languages</div>
   </div>
-  <div class="mb-10 flex flex-col divide-y divide-base-300">
-    <div class="flex items-center justify-between py-3">
-      <span>English</span>
-      <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+  <div class="mb-10 grid md:grid-cols-2 gap-3">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between bg-base-200 rounded-xl px-4 py-3">
+        <span>English</span>
+        <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+      </div>
+      <div class="flex items-center justify-between bg-base-200 rounded-xl px-4 py-3">
+        <span>Persian</span>
+        <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+      </div>
+      <div class="flex items-center justify-between bg-base-200 rounded-xl px-4 py-3">
+        <span>Italian</span>
+        <span class="opacity-60 text-sm">Basic — actively learning</span>
+      </div>
     </div>
-    <div class="flex items-center justify-between py-3">
-      <span>Persian</span>
-      <span class="badge badge-primary badge-outline">Native or Bilingual</span>
-    </div>
-    <div class="flex items-center justify-between py-3">
-      <span>Kurdish</span>
-      <span class="badge badge-primary badge-outline">Native or Bilingual</span>
-    </div>
-    <div class="flex items-center justify-between py-3">
-      <span>Turkish</span>
-      <span class="opacity-60 text-sm">Basic</span>
-    </div>
-    <div class="flex items-center justify-between py-3">
-      <span>Italian</span>
-      <span class="opacity-60 text-sm">Basic</span>
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between bg-base-200 rounded-xl px-4 py-3">
+        <span>Kurdish</span>
+        <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+      </div>
+      <div class="flex items-center justify-between bg-base-200 rounded-xl px-4 py-3">
+        <span>Turkish</span>
+        <span class="opacity-60 text-sm">Basic</span>
+      </div>
     </div>
   </div>
 
