@@ -33,15 +33,5 @@ const activeClass = "bg-base-300";
   document.addEventListener("astro:page-load", () => {
     const activeItemElem = document.getElementById(sideBarActiveItemID);
     activeItemElem && activeItemElem.classList.add(activeClass);
-
-    document.querySelectorAll('a[href^="/projects#"]').forEach((link) => {
-      link.addEventListener("click", (e) => {
-        if (window.location.pathname === "/projects") {
-          e.preventDefault();
-          const id = link.getAttribute("href").split("#")[1];
-          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
   });
 </script>
