@@ -59,6 +59,13 @@ const categories = [
 
 <script>
   document.addEventListener("astro:page-load", () => {
+    // Scroll to hash on arrival (e.g. navigating from homepage via View Transitions)
+    if (window.location.hash) {
+      const el = document.getElementById(window.location.hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Intercept sidebar category clicks when already on this page
     document.querySelectorAll('a[href^="/projects#"]').forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
