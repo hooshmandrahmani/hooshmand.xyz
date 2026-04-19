@@ -222,39 +222,71 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
-  <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 mb-10">
+  <div class="grid md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
     <div>
-      <div class="font-semibold mb-1">Methodology</div>
-      <div class="opacity-80 text-sm">
-        Robust Optimization · Stochastic Modelling · Data-driven Optimization · Integer
-        Programming · Machine Learning · Experimental Design · Empirical Methods
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Methodology</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Robust Optimization</span>
+        <span class="badge badge-outline">Stochastic Modelling</span>
+        <span class="badge badge-outline">Data-driven Optimization</span>
+        <span class="badge badge-outline">Integer Programming</span>
+        <span class="badge badge-outline">Machine Learning</span>
+        <span class="badge badge-outline">Experimental Design</span>
+        <span class="badge badge-outline">Empirical Methods</span>
       </div>
     </div>
     <div>
-      <div class="font-semibold mb-1">Programming</div>
-      <div class="opacity-80 text-sm">Python · R · Git · MATLAB · Stata</div>
-    </div>
-    <div>
-      <div class="font-semibold mb-1">Optimization Tools</div>
-      <div class="opacity-80 text-sm">Gurobi · GAMS · CPLEX</div>
-    </div>
-    <div>
-      <div class="font-semibold mb-1">Analytics & Engineering</div>
-      <div class="opacity-80 text-sm">
-        Minitab · Vensim · SmartPLS · Arena · EViews · @Risk · Bizagi · Best Fit
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Programming</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Python</span>
+        <span class="badge badge-outline">R</span>
+        <span class="badge badge-outline">Git</span>
+        <span class="badge badge-outline">MATLAB</span>
+        <span class="badge badge-outline">Stata</span>
       </div>
     </div>
     <div>
-      <div class="font-semibold mb-1">Automation</div>
-      <div class="opacity-80 text-sm">N8N · API Integration</div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Optimization Tools</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Gurobi</span>
+        <span class="badge badge-outline">GAMS</span>
+        <span class="badge badge-outline">CPLEX</span>
+      </div>
     </div>
     <div>
-      <div class="font-semibold mb-1">AI-Based Development</div>
-      <div class="opacity-80 text-sm">Claude Code · Codex · Opencode</div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Analytics & Engineering</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Minitab</span>
+        <span class="badge badge-outline">Vensim</span>
+        <span class="badge badge-outline">SmartPLS</span>
+        <span class="badge badge-outline">Arena</span>
+        <span class="badge badge-outline">EViews</span>
+        <span class="badge badge-outline">@Risk</span>
+        <span class="badge badge-outline">Bizagi</span>
+        <span class="badge badge-outline">Best Fit</span>
+      </div>
     </div>
     <div>
-      <div class="font-semibold mb-1">Reporting</div>
-      <div class="opacity-80 text-sm">LaTeX · Microsoft Office</div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Automation</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">N8N</span>
+        <span class="badge badge-outline">API Integration</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">AI-Based Development</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Claude Code</span>
+        <span class="badge badge-outline">Codex</span>
+        <span class="badge badge-outline">Opencode</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Reporting</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">LaTeX</span>
+        <span class="badge badge-outline">Microsoft Office</span>
+      </div>
     </div>
   </div>
 
@@ -262,16 +294,16 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Test Scores</div>
   </div>
-  <div class="grid md:grid-cols-2 gap-4 mb-10">
-    <div class="border border-base-300 rounded p-4">
-      <div class="text-2xl font-bold">105</div>
-      <div class="font-medium">TOEFL iBT</div>
-      <div class="text-sm opacity-70">R 28 · L 28 · S 25 · W 24 · Aug 2024</div>
+  <div class="flex gap-8 mb-10 text-center">
+    <div class="flex-1">
+      <div class="text-4xl font-bold">105</div>
+      <div class="font-medium mt-1">TOEFL iBT</div>
+      <div class="text-sm opacity-50 mt-1">R 28 · L 28 · S 25 · W 24<br/>Aug 2024</div>
     </div>
-    <div class="border border-base-300 rounded p-4">
-      <div class="text-2xl font-bold">311</div>
-      <div class="font-medium">GRE General</div>
-      <div class="text-sm opacity-70">Q 167 · V 144 · AW 3.0 · Nov 2022</div>
+    <div class="flex-1">
+      <div class="text-4xl font-bold">311</div>
+      <div class="font-medium mt-1">GRE General</div>
+      <div class="text-sm opacity-50 mt-1">Q 167 · V 144 · AW 3.0<br/>Nov 2022</div>
     </div>
   </div>
 
@@ -279,16 +311,27 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Languages</div>
   </div>
-  <div class="mb-10 grid md:grid-cols-2 gap-x-8">
-    <ul class="list-disc mx-6 grid gap-1">
-      <li>English — Native or Bilingual Proficiency</li>
-      <li>Persian — Native or Bilingual Proficiency</li>
-      <li>Italian — Basic</li>
-    </ul>
-    <ul class="list-disc mx-6 grid gap-1">
-      <li>Kurdish — Native or Bilingual Proficiency</li>
-      <li>Turkish — Basic</li>
-    </ul>
+  <div class="mb-10 flex flex-col divide-y divide-base-300">
+    <div class="flex items-center justify-between py-3">
+      <span>English</span>
+      <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+    </div>
+    <div class="flex items-center justify-between py-3">
+      <span>Persian</span>
+      <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+    </div>
+    <div class="flex items-center justify-between py-3">
+      <span>Kurdish</span>
+      <span class="badge badge-primary badge-outline">Native or Bilingual</span>
+    </div>
+    <div class="flex items-center justify-between py-3">
+      <span>Turkish</span>
+      <span class="opacity-60 text-sm">Basic</span>
+    </div>
+    <div class="flex items-center justify-between py-3">
+      <span>Italian</span>
+      <span class="opacity-60 text-sm">Basic</span>
+    </div>
   </div>
 
   <!-- Honors & Awards -->
