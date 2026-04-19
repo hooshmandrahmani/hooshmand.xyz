@@ -7,10 +7,11 @@ const { sideBarActiveItemID } = Astro.props;
 <div class="drawer-side z-40">
   <label for="my-drawer" class="drawer-overlay"></label>
   <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
-    <div class="w-fit mx-auto mt-5 mb-2">
+    <!-- Profile card -->
+    <div class="mx-auto mt-5 mb-4 w-[15.5rem] bg-base-100 rounded-3xl shadow-lg p-3 border border-base-300">
       <a href="/">
-        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
-          <div class="w-[13.6rem] h-[17rem] rounded-2xl bg-base-300 overflow-hidden">
+        <div class="transition ease-in-out hover:scale-[101%]">
+          <div class="w-full h-[17rem] rounded-2xl bg-base-300 overflow-hidden">
             <img
               src="/portrait.jpg"
               alt="Hooshmand Rahmani"
@@ -21,11 +22,19 @@ const { sideBarActiveItemID } = Astro.props;
           </div>
         </div>
       </a>
+      <div class="text-center mt-3 px-1">
+        <div class="font-semibold text-base-content">Hooshmand Rahmani</div>
+        <div class="text-xs opacity-60 mt-1 leading-snug">
+          PhD Researcher · Business Analytics & Operations Management · Sabanci University
+        </div>
+      </div>
     </div>
-    <div class="text-center mb-5 px-3">
-      <div class="font-semibold text-base-content">Hooshmand Rahmani</div>
-      <div class="text-xs opacity-70 mt-1 leading-snug">
-        PhD Researcher · Business Analytics & Operations Management · Sabanci University
+
+    <!-- Current Focus -->
+    <div class="px-4 mb-4">
+      <div class="text-sm font-bold mb-1">Current Focus</div>
+      <div class="text-xs opacity-70 leading-relaxed">
+        Robust optimization and stochastic modelling for healthcare operations and sustainable supply chains.
       </div>
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
