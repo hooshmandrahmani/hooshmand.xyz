@@ -30,27 +30,42 @@ const activeClass = "font-bold";
 </ul>
 
 <script define:vars={{ sideBarActiveItemID }}>
+  function clearSubLinks() {
+    document.querySelectorAll('a[href^="/projects#"]').forEach((el) => {
+      el.classList.remove("font-bold", "opacity-100");
+      el.classList.add("opacity-70");
+    });
+  }
+
+  function activateSubLink(hash) {
+    if (!hash) return;
+    const subLink = document.querySelector(`a[href="/projects${hash}"]`);
+    if (subLink) {
+      clearSubLinks();
+      subLink.classList.add("font-bold", "opacity-100");
+      subLink.classList.remove("opacity-70");
+    }
+  }
+
   document.addEventListener("astro:page-load", () => {
     // Clear all previous active states
     ["home", "projects", "cv", "contact"].forEach((id) => {
       document.getElementById(id)?.classList.remove("font-bold");
     });
-    document.querySelectorAll('a[href^="/projects#"]').forEach((el) => {
-      el.classList.remove("font-bold", "opacity-100");
-      el.classList.add("opacity-70");
-    });
+    clearSubLinks();
 
     // Bold the active main nav item
     document.getElementById(sideBarActiveItemID)?.classList.add("font-bold");
 
     // Bold the matching sub-link based on current hash
-    const hash = window.location.hash;
-    if (hash) {
-      const subLink = document.querySelector(`a[href="/projects${hash}"]`);
-      if (subLink) {
-        subLink.classList.add("font-bold", "opacity-100");
-        subLink.classList.remove("opacity-70");
-      }
-    }
+    activateSubLink(window.location.hash);
+
+    // On sub-link click: bold immediately (works on same-page scroll too)
+    document.querySelectorAll('a[href^="/projects#"]').forEach((el) => {
+      el.addEventListener("click", () => {
+        const hash = el.getAttribute("href").split("#")[1];
+        activateSubLink("#" + hash);
+      });
+    });
   });
 </script>
