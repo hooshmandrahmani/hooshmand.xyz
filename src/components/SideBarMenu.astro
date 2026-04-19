@@ -9,17 +9,17 @@ const activeClass = "bg-base-300";
     <a class="py-3 text-base" id="projects" href="/projects">Projects</a>
     <ul class="ml-2 mt-0">
       <li>
-        <a class="py-1.5 text-sm opacity-70 hover:opacity-100 flex items-center gap-1.5" id="projects-optimization" href="/projects#optimization" data-astro-reload>
+        <a class="py-1.5 text-sm opacity-70 hover:opacity-100 flex items-center gap-1.5" id="projects-optimization" href="/projects#optimization">
           <span class="opacity-50">→</span> Optimization
         </a>
       </li>
       <li>
-        <a class="py-1.5 text-sm opacity-70 hover:opacity-100 flex items-center gap-1.5" id="projects-ml" href="/projects#machine-learning" data-astro-reload>
+        <a class="py-1.5 text-sm opacity-70 hover:opacity-100 flex items-center gap-1.5" id="projects-ml" href="/projects#machine-learning">
           <span class="opacity-50">→</span> Machine Learning
         </a>
       </li>
       <li>
-        <a class="py-1.5 text-sm opacity-70 hover:opacity-100 flex items-center gap-1.5" id="projects-sc" href="/projects#supply-chain" data-astro-reload>
+        <a class="py-1.5 text-sm opacity-70 hover:opacity-100 flex items-center gap-1.5" id="projects-sc" href="/projects#supply-chain">
           <span class="opacity-50">→</span> Supply Chain
         </a>
       </li>
@@ -30,6 +30,18 @@ const activeClass = "bg-base-300";
 </ul>
 
 <script define:vars={{ sideBarActiveItemID, activeClass }}>
-  const activeItemElem = document.getElementById(sideBarActiveItemID);
-  activeItemElem && activeItemElem.classList.add(activeClass);
+  document.addEventListener("astro:page-load", () => {
+    const activeItemElem = document.getElementById(sideBarActiveItemID);
+    activeItemElem && activeItemElem.classList.add(activeClass);
+
+    document.querySelectorAll('a[href^="/projects#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        if (window.location.pathname === "/projects") {
+          e.preventDefault();
+          const id = link.getAttribute("href").split("#")[1];
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  });
 </script>
