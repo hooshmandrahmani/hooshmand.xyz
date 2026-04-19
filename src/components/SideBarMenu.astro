@@ -1,6 +1,6 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300";
+const activeClass = "font-bold";
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
@@ -31,7 +31,18 @@ const activeClass = "bg-base-300";
 
 <script define:vars={{ sideBarActiveItemID, activeClass }}>
   document.addEventListener("astro:page-load", () => {
+    // Bold the active main nav item
     const activeItemElem = document.getElementById(sideBarActiveItemID);
     activeItemElem && activeItemElem.classList.add(activeClass);
+
+    // Bold the active sub-link based on current hash
+    const hash = window.location.hash;
+    if (hash) {
+      const subLink = document.querySelector(`a[href="/projects${hash}"]`);
+      if (subLink) {
+        subLink.classList.add("font-bold", "opacity-100");
+        subLink.classList.remove("opacity-70");
+      }
+    }
   });
 </script>
