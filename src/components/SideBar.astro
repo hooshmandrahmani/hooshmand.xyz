@@ -13,11 +13,14 @@ const { sideBarActiveItemID } = Astro.props;
         <div class="transition ease-in-out hover:scale-[101%]">
           <div class="w-full h-[17rem] rounded-2xl bg-base-300 overflow-hidden">
             <img
-              src="/portrait.jpg"
+              src="/portrait.webp"
               alt="Hooshmand Rahmani"
               class="w-full h-full object-cover"
               style="object-position: center 30%; transform: scale(1.1); transform-origin: center 30%;"
-              onerror="this.onerror=null; this.src='/profile.webp';"
+              loading="eager"
+              decoding="async"
+              width="800"
+              height="1000"
             />
           </div>
         </div>
