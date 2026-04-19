@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+main p, main li {
+  text-align: justify;
+}
+
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
