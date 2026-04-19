@@ -39,19 +39,19 @@ module.exports = {
 				"hooshmand-dark": {
 					"color-scheme": "dark",
 
-					"primary":          "#4A89DC",
-					"primary-content":  "#ffffff",
-					"secondary":        "#2E4870",
-					"secondary-content":"#ffffff",
-					"accent":           "#6B9AD4",
-					"accent-content":   "#ffffff",
-					"neutral":          "#C8D8EE",
-					"neutral-content":  "#111827",
+					"primary":          "#C8BFB0",
+					"primary-content":  "#1F1B17",
+					"secondary":        "#2C2520",
+					"secondary-content":"#E8E3D8",
+					"accent":           "#A09080",
+					"accent-content":   "#1F1B17",
+					"neutral":          "#E8E3D8",
+					"neutral-content":  "#1F1B17",
 
-					"base-100": "#111827",
-					"base-200": "#1A2535",
-					"base-300": "#243348",
-					"base-content": "#D1DCF0",
+					"base-100": "#1F1B17",   // main content bg
+					"base-200": "#1C1816",   // sidebar / card bg
+					"base-300": "#302A24",   // borders, dividers
+					"base-content": "#E8E3D8",
 
 					"info":    "#3B82F6",
 					"success": "#22C55E",
