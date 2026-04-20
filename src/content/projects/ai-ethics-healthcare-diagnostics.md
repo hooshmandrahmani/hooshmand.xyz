@@ -1,7 +1,7 @@
 ---
 title: "AI Use in Health: Ethical Framework for Diagnostic Applications"
 description: "Group project evaluating ethical risks of AI-based diagnostic systems (medical imaging for pneumonia, cancer, and cardiovascular conditions) and proposing a responsible design framework built on contestability, explainability, accountability, privacy, fairness, and answerability."
-pubDate: "2026-04-01"
+pubDate: "2025-09-01"
 category: "Machine Learning"
 institution: "Sabanci University"
 supervisor: "DS440/CS540"
