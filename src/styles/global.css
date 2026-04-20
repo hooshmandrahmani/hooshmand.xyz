@@ -48,7 +48,12 @@ a, button {
   color: #ffffff !important;
 }
 
-/* Cards and timeline entries: border turns green on hover */
+/* Cards, contact cards, and timeline entries: border turns green on hover */
 .hover-green-border:hover {
   border-color: var(--site-green) !important;
+}
+
+/* Sidebar menu links turn green on hover */
+.menu li > a:hover {
+  color: var(--site-green) !important;
 }
