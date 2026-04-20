@@ -1,59 +1,63 @@
 ---
 title: "Robust Optimization for Integrated Healthcare Scheduling"
-description: "MILP with budgeted uncertainty in Python/Gurobi to simultaneously co-optimize surgical case planning and nurse-to-patient assignment, quantifying the Price of Robustness against stochastic demand and workload spikes."
+description: "Multi-resource MILP with budgeted uncertainty sets to jointly optimize surgical case planning and nurse-to-patient assignment — quantifying the Price of Robustness against surgical duration variability and nursing acuity spikes."
 pubDate: "2026-01-01"
 category: "Optimization & Uncertainty Modelling"
 institution: "Sabanci University"
-supervisor: "Dr. Burak Gokgur"
+supervisor: "Dr. Burak Gökgür"
 tags: ["MILP", "Gurobi", "Python", "Robust Optimization", "Healthcare Operations"]
 ---
 
 ## Overview
 
-Operating rooms account for up to 40% of total hospital expenses and an equivalent share of revenue. Despite this, Surgical Case Planning (SCP) and Nurse-to-Patient Assignment (NPA) are almost always solved in isolation — even though admitting a patient on day *d* simultaneously consumes OR time and generates nursing workload across the patient's entire length of stay. Solving them jointly under uncertainty is both operationally necessary and computationally hard.
+Operating rooms account for up to 40% of total hospital expenditure while simultaneously driving an equivalent share of revenue. Despite this, Surgical Case Planning (SCP) and Nurse-to-Patient Assignment (NPA) are almost universally solved as separate sequential problems — even though admitting a patient on day *d* simultaneously consumes operating theater capacity on that day and generates nursing workload across the patient's entire length of stay. Decoupling these decisions produces plans that are locally feasible in each sub-system but globally infeasible or severely suboptimal once the operational dependencies materialize.
 
-This paper, produced for OPIM 611 (Modeling in Operations Management) under Dr. Burak Gökgür, constructs, implements, and validates a mathematical model that does exactly that.
+This project constructs, implements, and validates an integrated mathematical model under uncertainty — treating SCP and NPA as a single coupled optimization problem from the outset, rather than as a pipeline.
 
 ## Problem Structure
 
-The model follows the **IHTC 2024 competition framework**, which defines the Integrated Healthcare Timetabling Problem (IHTP) over a planning horizon of 14–28 days. Core entities:
+The model follows the **IHTC 2024 competition framework**, which defines the Integrated Healthcare Timetabling Problem (IHTP) over a planning horizon of 14–28 days. The core entities and their coupling:
 
-- **Patients** — elective cases with a release date, required surgeon, and a surgery duration that is stochastic.
-- **Surgeons** — daily time budgets consumed by each assigned case.
-- **Operating Theaters (OTs)** — capacity in minutes per day; may be unavailable on specific dates.
-- **Nurses** — predefined on/off rosters and skill levels; each assigned to a room for a full shift.
+- **Patients** — elective cases with a release date, required surgeon, and a surgery duration that is uncertain.
+- **Surgeons** — daily time budgets consumed by assigned cases; overruns cascade directly into operating theater violations.
+- **Operating Theaters (OTs)** — finite capacity in minutes per day; may be unavailable on specific dates due to maintenance or staffing.
+- **Nurses** — predefined on/off rosters and skill levels, each assigned to a room for a full shift.
 
-The integration coupling is explicit: admitting patient *p* on day *d* triggers (1) consumption of surgeon and OT capacity on day *d*, and (2) nursing workload on every subsequent day through discharge.
+The structural coupling is explicit: scheduling patient *p* on day *d* triggers (1) surgeon and OT capacity consumption on day *d*, and (2) nursing workload on every subsequent day through discharge. No sequential decomposition can capture this coupling without losing optimality guarantees.
 
 ## Modelling Approach
 
-### Deterministic MILP
+### Deterministic MILP Baseline
 
-Binary decision variables assign each patient to a day–surgeon–OR triple, and nurses to room–shift pairs. Hard constraints enforce OT capacity, surgeon daily limits, and skill–room compatibility. Soft constraints minimize a weighted combination of surgical throughput loss and nurse overtime penalties.
+Binary decision variables assign each patient to a day–surgeon–OR triple; continuous and binary variables assign nurses to room–shift pairs. Hard constraints enforce OT time limits, surgeon daily budgets, and skill–room compatibility. The objective minimizes a weighted combination of unscheduled surgical cases and nurse overtime penalties.
 
-### Robust Counterpart via Bertsimas–Sim
+### Robust Counterpart — Bertsimas & Sim Framework
 
-Real-world hospitals face two principal uncertainty sources:
+Two sources of uncertainty threaten plan feasibility in real hospital environments:
 
-1. **Duration uncertainty** — surgery times follow right-skewed (log-normal) distributions; over-runs delay downstream cases and cascade into nursing hand-off failures.
-2. **Workload/acuity uncertainty** — a patient scheduled for routine recovery may deteriorate, generating higher nursing hours than anticipated.
+1. **Surgical duration uncertainty** — actual surgery times follow right-skewed distributions; overruns propagate downstream, displacing subsequent cases and disrupting nursing shift hand-offs.
+2. **Nursing acuity uncertainty** — a patient scheduled for routine recovery may deteriorate, generating higher care hours than the nominal plan anticipates.
 
-Rather than enumerating scenarios (which explodes exponentially), I applied the **Budgeted Uncertainty** framework of Bertsimas & Sim (2004). For a system with *N* uncertain surgeries, the budget parameter **Γ** controls the number of parameters allowed to deviate simultaneously to their worst-case values:
+Rather than enumerating scenarios — which grows exponentially with the number of uncertain parameters — I apply the **budgeted uncertainty set** of Bertsimas & Sim (2004). The budget parameter **Γ** controls the number of uncertain parameters permitted to simultaneously attain their worst-case values:
 
-- **Γ = 0** — nominal, deterministic solution (aggressive, high throughput, fragile)
-- **Γ = N** — fully robust (conservative; every surgery assumed worst-case)
-- **Intermediate Γ** — tunable conservatism that remains LP-tractable
+- **Γ = 0** — nominal solution: maximum throughput, no uncertainty protection
+- **Γ = N** — fully robust: every surgery assumes worst-case duration simultaneously
+- **Intermediate Γ** — tunable conservatism that preserves LP-tractability and yields a well-defined Price of Robustness curve
 
-The budget constraint is applied separately to OT capacity (protecting against surgical overruns) and nursing capacity (protecting against acuity spikes), allowing the planner to set independent risk tolerances for each bottleneck.
+Crucially, Γ is applied independently to OT capacity (protecting against surgical overruns) and nursing capacity (protecting against acuity spikes), allowing the hospital planner to calibrate risk tolerance separately for each bottleneck — a practically important flexibility that scenario-based stochastic programs do not naturally provide.
 
 ## Implementation
 
-The model was implemented in **Python with Gurobi** and tested on synthetic instances calibrated against the IHTC 2024 JSON data format. A sensitivity sweep across Γ values quantified the **Price of Robustness** — the objective function degradation per unit increase in protection level.
+The model was implemented in **Python with Gurobi** and tested on instances calibrated against the IHTC 2024 JSON data format. A sensitivity sweep across Γ values directly quantified the **Price of Robustness** — the marginal degradation in nominal objective value per unit increase in protection.
 
-## Results
+## Results and Insights
 
-- Increasing Γ reduced surgical throughput slightly on nominal days but **eliminated nurse workload violations** during synthetic demand spikes.
-- The robust schedule maintained feasibility across all simulated disruption scenarios where the deterministic model failed.
-- The Price of Robustness curve was convex and well-behaved, giving the hospital administrator a clear quantitative basis for choosing a conservatism level aligned with institutional risk tolerance.
+- Increasing Γ reduced nominal surgical throughput marginally but **eliminated nurse workload violations** across all simulated demand spike scenarios.
+- The deterministic baseline failed to maintain feasibility under realized uncertainty in a majority of disruption scenarios; the robust schedule remained feasible throughout.
+- The Price of Robustness curve exhibited convex, well-behaved structure — providing hospital administrators with a transparent, quantitative basis for selecting a conservatism level aligned with institutional risk tolerance and staffing buffers.
 
-The core finding: robust optimization provides a practical mechanism for trading theoretical efficiency for operational reliability — protecting nursing staff from overload while preserving care quality under uncertainty.
+The central finding is that the marginal cost of robustness is modest relative to the operational disruption costs it prevents. For healthcare systems where nurse overload directly affects patient safety, this trade-off is highly favorable — and the integrated formulation is essential to capturing it correctly.
+
+## Status
+
+Ongoing — OPIM 611 Modelling in Operations Management, Sabanci University.

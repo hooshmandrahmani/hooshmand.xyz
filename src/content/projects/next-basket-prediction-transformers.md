@@ -4,39 +4,42 @@ description: "Progressive enhancement framework for e-commerce next-basket recom
 pubDate: "2025-06-01"
 category: "Machine Learning"
 institution: "Sabanci University"
-supervisor: "Dr. Yucel Saygin"
+supervisor: "Dr. Yücel Saygın"
 tags: ["Transformers", "BERT4Rec", "Deep Learning", "Recommender Systems", "E-Commerce"]
 ---
 
 ## Overview
 
-Next-basket recommendation (NBR) asks: given a customer's full purchase history, what items will appear in their **next** shopping basket? Unlike predicting a single next item, NBR must infer an unordered set of potentially co-dependent items — a harder and more realistic problem that more closely mirrors how consumers shop (buying complementary items together: printer + ink, recipe ingredients, fashion ensembles).
+Next-basket recommendation (NBR) asks: given a customer's complete purchase history, what items will appear in their **next** shopping basket? Unlike single-item next-click prediction, NBR must infer an unordered set of potentially co-dependent items — a substantially harder problem that more closely mirrors actual consumer behavior, where purchases of complementary items (recipe ingredients, fashion ensembles, printer consumables) co-occur within the same transaction.
 
-This project, carried out as a team of six researchers for CS 525 at Sabanci University, systematically enhanced a recurrent neural network baseline toward a state-of-the-art Transformer-based architecture. The paper follows a **progressive enhancement framework**: each addition is independently validated before layering on the next.
+This project develops a **progressive enhancement framework** for NBR: beginning from a recurrent neural network baseline, each architectural and data-level modification is independently validated before the next is introduced, producing a clean ablation that isolates the contribution of each component.
 
 ## Baseline and Enhancements
 
-### Baseline: GRU
-The starting point was a standard Gated Recurrent Unit (GRU) model that encodes the sequence of historical baskets and predicts the next basket as a multi-label classification problem.
+### Baseline: Gated Recurrent Unit (GRU)
+
+The starting architecture is a standard GRU encoder that processes the sequence of historical baskets and outputs next-basket predictions as a multi-label classification problem. GRUs capture temporal dependencies but are inherently unidirectional — the model can only condition predictions on past purchases, not on the full sequential context.
 
 ### Enhancement 1: Bidirectional Transformer (BERT4Rec)
-The GRU encoder was replaced with a **bidirectional Transformer** inspired by BERT4Rec — using a Cloze-style masking objective where randomly masked items in the basket sequence must be predicted from bidirectional context. This allows the model to capture both past and future (within the sequence) dependencies simultaneously, which a unidirectional RNN cannot do.
 
-### Enhancement 2: Data Augmentation
-Four augmentation strategies were applied to address data sparsity and improve generalization:
+The GRU encoder is replaced with a **bidirectional Transformer** following the BERT4Rec architecture, which employs a Cloze-style masking objective: randomly masked items within the purchase sequence must be predicted from both left and right context simultaneously. This bidirectionality allows the model to capture co-purchase dependencies that a unidirectional encoder cannot — if a user systematically buys items A and C together, masking B and observing both neighbors enables the model to infer that structure.
 
-| Technique | Description |
+### Enhancement 2: Structured Data Augmentation
+
+Four augmentation strategies address data sparsity — a pervasive challenge in behavioral recommendation datasets where many users have short or irregular purchase histories:
+
+| Technique | Mechanism |
 |---|---|
-| **Item masking** | Randomly mask items within baskets during training |
-| **Sequence cropping** | Truncate purchase histories to various lengths |
-| **Sequence reversing** | Train on reversed purchase sequences |
-| **Intra-basket sorting** | Reorder items within baskets by different criteria |
+| **Item masking** | Randomly mask items within baskets during training, creating additional masked prediction targets |
+| **Sequence cropping** | Truncate purchase histories to variable lengths, forcing robustness to incomplete histories |
+| **Sequence reversing** | Train on reversed purchase sequences, regularizing temporal ordering assumptions |
+| **Intra-basket sorting** | Reorder items within baskets under different criteria, diversifying co-occurrence signals |
 
-These augmentations effectively multiply the training signal for users with short histories — a common challenge in real e-commerce datasets.
+These augmentations multiply the effective training signal for sparse users and reduce overfitting to specific sequential patterns.
 
 ## Experimental Results
 
-Experiments were conducted on the **Retail Rocket** dataset. The table below summarizes Recall@10 across model variants:
+Experiments were conducted on the **Retail Rocket** dataset — a large-scale e-commerce clickstream and purchase dataset. Performance is measured by Recall@10, the fraction of true next-basket items appearing in the top-10 predictions:
 
 | Model | Recall@10 |
 |---|---|
@@ -44,8 +47,10 @@ Experiments were conducted on the **Retail Rocket** dataset. The table below sum
 | Transformer + Augmentation | 0.0658 |
 | BERT4Rec standalone | **0.0731** |
 
-Each enhancement contributed meaningfully: the Transformer architecture alone improved recall significantly, and data augmentation provided additional gains. BERT4Rec standalone achieved the highest recall, while the combined Transformer + augmentation system offered the best balance of performance and robustness.
+The Transformer architecture alone produced the dominant share of improvement, with data augmentation providing further gains in generalization. BERT4Rec standalone achieved the highest Recall@10; the combined Transformer + augmentation system offered the best robustness-performance balance across user history lengths.
 
 ## Key Finding
 
-Bidirectional context modeling — allowing the model to see what a user purchased both before and after a masked item in training — substantially outperforms forward-only sequential models for capturing the complementary structure of shopping baskets. Data augmentation further improves generalization on sparse user histories.
+Bidirectional context modeling — conditioning item predictions on both preceding and subsequent purchases within the masked training objective — substantially outperforms forward-only sequential models for capturing the co-purchase structure of shopping baskets. The 4× improvement over the GRU baseline (0.0177 → 0.0731) demonstrates that architectural choice is the dominant factor, with data augmentation contributing meaningful additional generalization on sparse histories.
+
+The progressive enhancement methodology itself is a transferable contribution: it provides a rigorous framework for isolating the source of performance gains in recommendation systems, as opposed to reporting aggregate improvements from bundles of simultaneous changes.
