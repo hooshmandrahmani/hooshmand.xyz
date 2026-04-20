@@ -4,7 +4,7 @@ description: "Evaluation of ethical risks in AI-based medical diagnostic systems
 pubDate: "2025-09-01"
 category: "Machine Learning"
 institution: "Sabanci University"
-supervisor: "Sabanci University"
+supervisor: "Dilara Keküllüoğlu"
 tags: ["AI Ethics", "Healthcare AI", "Explainability", "Contestability", "Deep Learning", "GRAD-CAM", "SHAP"]
 ---
 
