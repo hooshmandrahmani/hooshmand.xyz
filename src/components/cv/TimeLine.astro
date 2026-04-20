@@ -2,11 +2,11 @@
 const { title, institution, date, location } = Astro.props;
 ---
 
-<div class="flex gap-4">
+<div class="group flex gap-4">
   <!-- Dot + connecting line -->
   <div class="flex flex-col items-center shrink-0 pt-[5px]">
-    <span class="w-2.5 h-2.5 rounded-full bg-base-content/60 shrink-0"></span>
-    <span class="timeline-line w-px bg-base-content/15 flex-1 mt-1.5"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-base-content/60 group-hover:bg-site-green transition-colors duration-200 shrink-0"></span>
+    <span class="timeline-line w-px bg-base-content/15 group-hover:bg-site-green group-hover:opacity-50 transition-colors duration-200 flex-1 mt-1.5"></span>
   </div>
   <!-- Content -->
   <div class="timeline-content pb-7 grow min-w-0">
