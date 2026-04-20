@@ -1,7 +1,7 @@
 ---
 title: "Customer Lifetime Value Assessment via Weighted K-Means Clustering"
 description: "Combined RFM scoring with a CLV-weighted K-Means algorithm to segment 2,239 grocery store customers — demonstrating that explicit lifetime value weighting produces sharper, more actionable segments than standard RFM classification alone."
-pubDate: "2025-11-01"
+pubDate: "2025-08-01"
 category: "Machine Learning"
 institution: "Sabanci University"
 supervisor: "Dr. Kemal Kılıç"

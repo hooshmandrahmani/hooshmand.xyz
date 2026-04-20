@@ -1,7 +1,7 @@
 ---
 title: "The Integrated Healthcare Timetabling Problem — A Systematic Review"
 description: "Structured literature review of 50+ papers across Patient Admission Scheduling, Surgical Case Planning, and Nurse-to-Room Assignment — mapping the field from foundational metaheuristics to modern robust and stochastic models, and establishing the methodological frontier for fully integrated planning."
-pubDate: "2025-10-01"
+pubDate: "2025-10-15"
 category: "Optimization & Uncertainty Modelling"
 institution: "Sabanci University"
 supervisor: "Dr. Can Akkan"

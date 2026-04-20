@@ -2,7 +2,7 @@
 title: "Multi-objective Robust Optimization for Remanufacturing Systems"
 titlePrefix: "MSc Thesis"
 description: "Multi-period, multi-objective robust MILP for hybrid manufacturing and remanufacturing planning under simultaneous uncertainty in return quality, processing times, and demand — solved with NSGA-II and validated on a real industrial case."
-pubDate: "2021-09-01"
+pubDate: "2025-09-20"
 category: "Optimization & Uncertainty Modelling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
