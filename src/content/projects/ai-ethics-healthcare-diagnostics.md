@@ -1,5 +1,5 @@
 ---
-title: "AI Use in Health: Ethical Framework for Diagnostic Applications"
+title: "AI Use in Healthcare: Ethical Framework for Diagnostic Applications"
 description: "Evaluation of ethical risks in AI-based medical diagnostic systems and design of a responsible framework built on contestability, explainability, accountability, privacy, fairness, and answerability — with a focus on contestability as the mechanism enabling meaningful human oversight."
 pubDate: "2025-09-01"
 category: "Machine Learning"
