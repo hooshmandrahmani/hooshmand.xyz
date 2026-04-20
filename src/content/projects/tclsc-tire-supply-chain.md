@@ -5,7 +5,7 @@ pubDate: "2021-08-01"
 category: "Optimization & Uncertainty Modelling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
-tags: ["Closed-Loop Supply Chain", "Network Design", "Robust Optimization", "Fuzzy Programming", "Stochastic Programming", "Sustainability", "Remanufacturing"]
+tags: ["MILP", "Robust Optimization", "Stochastic Programming", "Remanufacturing"]
 badge: "Working Paper"
 ---
 
