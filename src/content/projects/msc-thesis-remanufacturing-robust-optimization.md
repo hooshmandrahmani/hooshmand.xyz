@@ -53,7 +53,7 @@ Performance was evaluated using:
 
 ## Case Study
 
-The validated model was applied to a real Iranian manufacturing company, providing production and remanufacturing plans across multiple periods. Sensitivity analysis on key model parameters generated managerial recommendations for supply chain planners under changing uncertainty levels.
+The validated model was applied to a real Iranian manufacturing company, providing production and remanufacturing plans across multiple periods. The robust plan achieved a **14% reduction in total cost** and a **10% reduction in environmental impact** relative to the deterministic baseline. Sensitivity analysis on key model parameters generated managerial recommendations for supply chain planners under changing uncertainty levels.
 
 ## Managerial Insight
 
