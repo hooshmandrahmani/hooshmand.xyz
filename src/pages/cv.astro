@@ -33,11 +33,17 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
-  <div class="time-line-container grid gap-4 mb-10">
+  <div class="time-line-container grid mb-10">
     <TimeLineElement
       title="PhD — Business Analytics & Operations Management"
-      subtitle="Sep 2024 — Present · Sabanci Business School, Sabanci University · Istanbul, Türkiye · GPA 3.5 / 4.00 · Full Scholarship"
+      institution="Sabanci Business School, Sabanci University"
+      date="Sep 2024 — Present"
+      location="Istanbul, Türkiye"
     >
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300 font-medium">GPA 3.5 / 4.00</span>
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300">Full Scholarship</span>
+      </div>
       <strong>Coursework:</strong> Modelling in Operations Management · Stochastic
       Processes · Data Mining · Operations and Decision Analytics · Empirical Methods in
       Operations Management · Data and AI Ethics · Philosophy of Science and Society ·
@@ -45,8 +51,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="MSc — Industrial Engineering"
-      subtitle="Sep 2018 — Sep 2021 · Iran University of Science and Technology · Tehran, Iran · GPA 18.33 / 20.00 · Fellowship recipient"
+      institution="Iran University of Science and Technology"
+      date="Sep 2018 — Sep 2021"
+      location="Tehran, Iran"
     >
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300 font-medium">GPA 18.33 / 20.00</span>
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300">Fellowship Recipient</span>
+      </div>
       <strong>Thesis:</strong> Multi-objective robust optimization model for hybrid
       manufacturing and remanufacturing under simultaneous uncertainty in return quality,
       processing times, and demand. Supervisor: Dr. Ahmad Makui.<br />
@@ -56,8 +68,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="BSc — Industrial Engineering"
-      subtitle="Sep 2013 — Sep 2017 · Amirkabir University of Technology · Tehran, Iran · Fellowship recipient · Top 2% in Iran's University Entrance Exam"
+      institution="Amirkabir University of Technology"
+      date="Sep 2013 — Sep 2017"
+      location="Tehran, Iran"
     >
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300">Fellowship Recipient</span>
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300">Top 2% National Entrance Exam</span>
+      </div>
       <strong>Thesis:</strong> Statistical risk assessment in mine operations. Supervisor:
       Dr. Kourosh Shahriar.
     </TimeLineElement>
@@ -103,11 +121,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Research Experience</div>
   </div>
 
-  <div class="text-xl font-semibold mb-3 mt-2 opacity-80">Sabanci University</div>
-  <div class="time-line-container grid gap-4 mb-8">
+  <div class="text-base font-semibold mb-3 mt-2 opacity-60 uppercase tracking-widest text-sm">Sabanci University</div>
+  <div class="time-line-container grid mb-8">
     <TimeLineElement
       title="Robust Optimization for Integrated Healthcare Scheduling"
-      subtitle="Jan 2026 · Sabanci Business School · Supervisor: Dr. Burak Gökgür"
+      institution="Sabanci Business School · Supervisor: Dr. Burak Gökgür"
+      date="Jan 2026"
     >
       Formulated a multi-resource MILP with budgeted uncertainty sets (Bertsimas & Sim) in
       Python and Gurobi to jointly optimize surgical case planning and nurse-to-patient
@@ -117,7 +136,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="The Integrated Healthcare Timetabling Problem — A Systematic Review"
-      subtitle="Oct 2025 · Sabanci Business School · PhD Summer Paper · Supervisor: Dr. Can Akkan"
+      institution="Sabanci Business School · PhD Summer Paper · Supervisor: Dr. Can Akkan"
+      date="Oct 2025"
     >
       Synthesized 50+ papers on Patient Admission Scheduling, Surgical Case Planning, and
       Nurse-to-Room Assignment, tracing the field from foundational metaheuristics to modern
@@ -126,7 +146,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Next-Basket Prediction using Bidirectional Transformers"
-      subtitle="Jun 2025 · Sabanci Business School · Supervisor: Dr. Yücel Saygın"
+      institution="Sabanci Business School · Supervisor: Dr. Yücel Saygın"
+      date="Jun 2025"
     >
       Developed a progressive enhancement framework for e-commerce recommendation,
       replacing a GRU baseline with a BERT4Rec bidirectional Transformer and structured
@@ -136,7 +157,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Proactive Environmental Strategies and Supply Chain Performance"
-      subtitle="Jun 2025 · Sabanci Business School · Supervisor: Dr. Melek Akın Ateş"
+      institution="Sabanci Business School · Supervisor: Dr. Melek Akın Ateş"
+      date="Jun 2025"
     >
       Applied PLS-SEM (SmartPLS) to survey data from Turkish manufacturing firms to test
       how customer pressure and organizational commitment drive proactive environmental
@@ -145,7 +167,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Customer Lifetime Value Assessment via Weighted K-Means Clustering"
-      subtitle="Jan 2025 · Sabanci Business School · Supervisor: Dr. Kemal Kılıç"
+      institution="Sabanci Business School · Supervisor: Dr. Kemal Kılıç"
+      date="Jan 2025"
     >
       Integrated RFM behavioral scoring with CLV-weighted K-Means clustering on a
       2,239-customer grocery dataset. CLV weighting produced tighter, better-separated
@@ -154,11 +177,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
   </div>
 
-  <div class="text-xl font-semibold mb-3 opacity-80">Iran University of Science and Technology</div>
-  <div class="time-line-container grid gap-4 mb-10">
+  <div class="text-base font-semibold mb-3 opacity-60 uppercase tracking-widest text-sm">Iran University of Science and Technology</div>
+  <div class="time-line-container grid mb-10">
     <TimeLineElement
       title="MSc Thesis — Multi-objective Robust Optimization for Remanufacturing Systems"
-      subtitle="Sep 2021 · School of Industrial Engineering · Supervisor: Dr. Ahmad Makui"
+      institution="School of Industrial Engineering · Supervisor: Dr. Ahmad Makui"
+      date="Sep 2021"
     >
       Developed and solved a multi-period, multi-objective robust MILP for hybrid
       manufacturing and remanufacturing planning under simultaneous uncertainty in return
@@ -169,7 +193,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Blockchain-Based Verification Frameworks for Supply Chain Transparency"
-      subtitle="Jan 2023 · School of Industrial Engineering · Supervisor: Dr. Morteza Ghomi-Avili"
+      institution="School of Industrial Engineering · Supervisor: Dr. Morteza Ghomi-Avili"
+      date="Jan 2023"
     >
       Analysed a blockchain-enabled closed-loop supply chain framework combining IoT/RFID
       traceability, smart contract governance, and multi-objective fuzzy network
@@ -178,7 +203,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Large-Scale Optimization of Healthcare Logistics via Benders Decomposition"
-      subtitle="Dec 2019 · School of Industrial Engineering · Supervisor: Dr. Hadi Sahebi"
+      institution="School of Industrial Engineering · Supervisor: Dr. Hadi Sahebi"
+      date="Dec 2019"
     >
       Implemented a Benders decomposition scheme in GAMS for blood supply chain network
       design — master problem on strategic facility decisions, subproblem on operational
@@ -187,7 +213,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Review of Data-Driven Robust Optimization Methodologies"
-      subtitle="Dec 2019 · School of Industrial Engineering · Supervisor: Dr. Mir Saman Pishvaee"
+      institution="School of Industrial Engineering · Supervisor: Dr. Mir Saman Pishvaee"
+      date="Dec 2019"
     >
       Surveyed major data-driven robust optimization frameworks — including uncertainty set
       construction from empirical data, distributionally robust approaches, and
@@ -196,7 +223,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Analytical Approaches in Multi-Modal Transportation Systems"
-      subtitle="Jun 2019 · School of Industrial Engineering · Supervisor: Dr. Mahdi Hosseini-Motlagh"
+      institution="School of Industrial Engineering · Supervisor: Dr. Mahdi Hosseini-Motlagh"
+      date="Jun 2019"
     >
       Reviewed optimization and analytical methods for multi-modal transportation planning,
       examining trade-offs between cost, service level, and environmental impact in
@@ -204,7 +232,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </TimeLineElement>
     <TimeLineElement
       title="Discrete-Event Simulation for Transportation System Performance Analysis"
-      subtitle="Jan 2019 · School of Industrial Engineering · Supervisor: Dr. Kamran Shahanaghi"
+      institution="School of Industrial Engineering · Supervisor: Dr. Kamran Shahanaghi"
+      date="Jan 2019"
     >
       Built an Arena discrete-event simulation of a multi-stage transportation system,
       generating utilization profiles, queue-length distributions, and throughput sensitivity
@@ -220,9 +249,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Graduate Teaching Assistant — Sabanci Business School"
-      subtitle="Sep 2024 — Present · Sabanci University · 250+ students across MBA and undergraduate programs"
+      title="Graduate Teaching Assistant"
+      institution="Sabanci Business School, Sabanci University"
+      date="Sep 2024 — Present"
+      location="Istanbul, Türkiye"
     >
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300">250+ students · MBA & Undergraduate</span>
+      </div>
       <ul class="list-disc ml-5">
         <li>MKTG 560 — Applications in Digital Marketing (MBA) · Jan — Jun 2026</li>
         <li>BAN 801 — Marketing Analytics (MBA) · Jan — Jun 2026</li>
@@ -234,9 +268,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Graduate Teaching Assistant — School of Industrial Engineering"
-      subtitle="Jan 2019 — Jun 2024 · Iran University of Science and Technology · 70+ students"
+      title="Graduate Teaching Assistant"
+      institution="School of Industrial Engineering, IUST"
+      date="Jan 2019 — Jun 2024"
+      location="Tehran, Iran"
     >
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-lg bg-base-200 border border-base-300">70+ students</span>
+      </div>
       <ul class="list-disc ml-5">
         <li>Graduate thesis advising · Oct 2021 — Jun 2024</li>
         <li>IE 201 — Engineering Economics (37 undergraduates) · Jan — Jun 2019</li>

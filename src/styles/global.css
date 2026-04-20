@@ -18,8 +18,11 @@ a, button {
   opacity: 0.4;
 }
 
-.time-line-container>div:last-child {
-    padding-bottom: 0;
+.time-line-container>div:last-child .timeline-line {
+  display: none;
+}
+.time-line-container>div:last-child .timeline-content {
+  padding-bottom: 0;
 }
 
 /* Green dividers between cards */
