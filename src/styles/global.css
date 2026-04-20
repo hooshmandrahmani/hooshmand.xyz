@@ -38,11 +38,6 @@ a, button {
   --site-green: #3DAA72;
 }
 
-/* Plain links (not buttons, not badges) turn green on hover */
-a:not(.btn):not([class*="badge"]):hover {
-  color: var(--site-green);
-}
-
 /* Outline buttons fill green on hover */
 .btn-outline:hover {
   background-color: var(--site-green) !important;
@@ -53,9 +48,4 @@ a:not(.btn):not([class*="badge"]):hover {
 /* Cards and timeline entries: border turns green on hover */
 .hover-green-border:hover {
   border-color: var(--site-green) !important;
-}
-
-/* Card link wrapper: don't cascade green to all children */
-a.card-link:hover {
-  color: inherit;
 }
