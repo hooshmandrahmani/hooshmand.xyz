@@ -56,6 +56,7 @@ const last_projects = projects.slice(0, 3);
       <>
         <HorizontalCard
           title={project.data.title}
+          titlePrefix={project.data.titlePrefix}
           img={project.data.heroImage}
           desc={project.data.description}
           url={"/projects/" + createSlug(project.data.title, project.slug)}

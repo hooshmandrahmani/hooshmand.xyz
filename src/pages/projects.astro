@@ -42,6 +42,7 @@ const categories = [
           <>
             <HorizontalCard
               title={project.data.title}
+              titlePrefix={project.data.titlePrefix}
               img={project.data.heroImage}
               desc={project.data.description}
               url={"/projects/" + createSlug(project.data.title, project.slug)}
