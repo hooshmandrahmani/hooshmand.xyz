@@ -7,8 +7,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Curriculum Vitae</div>
     <p class="py-2 opacity-80">
-      A complete record of my education, research, publications, teaching, awards, and
-      technical skills.
+      Education, research, teaching, and technical background.
     </p>
   </div>
 
@@ -19,12 +18,15 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
   <div class="mb-10 text-justify">
-    I'm a PhD researcher in Business Analytics and Operations Management at Sabanci
-    University, with a background in industrial engineering. My work focuses on
-    mathematical modelling and data-driven decision systems. My research spans robust
-    optimization, stochastic modelling, integer programming, and machine learning, with
-    applications in healthcare operations, sustainable supply chains, and remanufacturing
-    systems.
+    PhD researcher in Business Analytics and Operations Management at Sabanci Business
+    School, with a background in industrial engineering. My research develops mathematical
+    models for operational decision-making under uncertainty — combining robust optimization,
+    stochastic programming, and integer programming to build plans that remain feasible and
+    near-optimal when realized conditions deviate from expectations. Application domains
+    include healthcare operations, sustainable supply chains, and remanufacturing systems. I
+    am particularly interested in problems where the coupling of multiple resource types
+    under uncertainty creates challenges that decomposition-based or uncertainty-aware
+    formulations are uniquely positioned to address.
   </div>
 
   <!-- Education -->
@@ -45,18 +47,19 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       title="MSc — Industrial Engineering"
       subtitle="Sep 2018 — Sep 2021 · Iran University of Science and Technology · Tehran, Iran · GPA 18.33 / 20.00 · Fellowship recipient"
     >
-      <strong>Thesis:</strong> Multi-objective robust optimization model for
-      remanufacturing under uncertain quality and time. Supervisor: Dr. Ahmad Makui.<br />
+      <strong>Thesis:</strong> Multi-objective robust optimization model for hybrid
+      manufacturing and remanufacturing under simultaneous uncertainty in return quality,
+      processing times, and demand. Supervisor: Dr. Ahmad Makui.<br />
       <strong>Coursework:</strong> Game Theory · Econometrics · Operations Research ·
-      Uncertain Programming (Robust Optimization) · Fuzzy Theory and Applications · Network
-      Theory · Systems Engineering · Computer Simulation and Optimization.
+      Robust Optimization · Fuzzy Theory and Applications · Network Theory · Systems
+      Engineering · Computer Simulation and Optimization.
     </TimeLineElement>
     <TimeLineElement
-      title="BSc — Engineering"
+      title="BSc — Industrial Engineering"
       subtitle="Sep 2013 — Sep 2017 · Amirkabir University of Technology · Tehran, Iran · Fellowship recipient · Top 2% in Iran's University Entrance Exam"
     >
-      <strong>Thesis:</strong> Statistical risk assessment in mines. Supervisor: Dr. Kourosh
-      Shahriar.
+      <strong>Thesis:</strong> Statistical risk assessment in mine operations. Supervisor:
+      Dr. Kourosh Shahriar.
     </TimeLineElement>
   </div>
 
@@ -67,8 +70,9 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <ul class="list-disc mx-6 mb-10 grid gap-3">
     <li>
       <a href="/projects/msc-thesis--multi-objective-robust-optimization-for-remanufacturing-systems" class="font-semibold hover:opacity-70 transition-opacity duration-150"
-        >Multi-objective robust optimization model for hybrid manufacturing and
-        remanufacturing planning under uncertainty.</a
+        >Multi-objective robust optimization for hybrid manufacturing and remanufacturing
+        planning under simultaneous uncertainty in return quality, processing times, and
+        demand.</a
       >
       <div class="text-sm opacity-70">
         H. Rahmani, A. Makui — <em>Working paper · In progress</em>
@@ -76,11 +80,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </li>
     <li>
       <a href="/projects/tire-closed-loop-supply-chain-network-design-under-uncertainty" class="font-semibold hover:opacity-70 transition-opacity duration-150"
-        >Green closed-loop supply chain model for remanufacturing to reduce waste and its
-        environmental impacts with Robust Fuzzy Stochastic Programming.</a
+        >Sustainable closed-loop supply chain network design for remanufacturing under
+        hybrid uncertainty — a robust fuzzy stochastic programming approach.</a
       >
       <div class="text-sm opacity-70">
-        H. Rahmani, A. Makui — <em>Working paper · In progress</em>
+        H. Rahmani, M. Ghomi-Avili — <em>Working paper · In progress</em>
       </div>
     </li>
   </ul>
@@ -94,97 +98,119 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container grid gap-4 mb-8">
     <TimeLineElement
       title="Robust Optimization for Integrated Healthcare Scheduling"
-      subtitle="Jan 2026 · Sabanci Business School · Supervisor: Dr. Burak Gokgur"
+      subtitle="Jan 2026 · Sabanci Business School · Supervisor: Dr. Burak Gökgür"
     >
-      Formulated an MILP model with budgeted uncertainty in Python (Gurobi) to co-optimize
-      surgical planning and nurse assignment, preventing staff workload violations during
-      stochastic demand spikes.
+      Formulated a multi-resource MILP with budgeted uncertainty sets (Bertsimas & Sim) in
+      Python and Gurobi to jointly optimize surgical case planning and nurse-to-patient
+      assignment. Quantified the Price of Robustness across a Γ sweep, demonstrating that
+      modest conservatism eliminates nurse workload violations during demand spikes with
+      minimal throughput cost.
     </TimeLineElement>
     <TimeLineElement
-      title="The Integrated Healthcare Timetabling Problem — A Review of Optimization Models and Solution Methods"
+      title="The Integrated Healthcare Timetabling Problem — A Systematic Review"
       subtitle="Oct 2025 · Sabanci Business School · PhD Summer Paper · Supervisor: Dr. Can Akkan"
     >
-      Literature review synthesizing foundational metaheuristics and optimization models
-      for integrated, dynamic hospital scheduling.
+      Synthesized 50+ papers on Patient Admission Scheduling, Surgical Case Planning, and
+      Nurse-to-Room Assignment, tracing the field from foundational metaheuristics to modern
+      robust and stochastic formulations. Developed an integration taxonomy and identified
+      the open gap between fully integrated models and uncertainty-aware planning.
     </TimeLineElement>
     <TimeLineElement
-      title="Next-Basket Prediction using Bidirectional Transformers with Data Augmentation"
-      subtitle="Jun 2025 · Sabanci Business School · Supervisor: Dr. Yucel Saygin"
+      title="Next-Basket Prediction using Bidirectional Transformers"
+      subtitle="Jun 2025 · Sabanci Business School · Supervisor: Dr. Yücel Saygın"
     >
-      Improved an e-commerce recommendation system by applying a bidirectional Transformer
-      and data augmentation to better capture customer shopping patterns and predict next
-      purchases.
+      Developed a progressive enhancement framework for e-commerce recommendation,
+      replacing a GRU baseline with a BERT4Rec bidirectional Transformer and structured
+      data augmentation. Achieved a 4× improvement in Recall@10 on the Retail Rocket
+      dataset; isolated the contribution of architecture versus augmentation through
+      controlled ablation.
     </TimeLineElement>
     <TimeLineElement
-      title="An Empirical Study on Consumer Trust and Willingness-to-Pay"
+      title="Proactive Environmental Strategies and Supply Chain Performance"
       subtitle="Jun 2025 · Sabanci Business School · Supervisor: Dr. Melek Akın Ateş"
     >
-      Designed an empirical study using Structural Equation Modeling to analyze green
-      trust's mediating role in sustainable technology purchasing behavior.
+      Applied PLS-SEM (SmartPLS) to survey data from Turkish manufacturing firms to test
+      how customer pressure and organizational commitment drive proactive environmental
+      strategies, and how those strategies mediate the path to environmental investment
+      outcomes. Full mediation confirmed across both antecedents.
     </TimeLineElement>
     <TimeLineElement
-      title="Customer Lifetime Value Assessment via K-Means Clustering"
+      title="Customer Lifetime Value Assessment via Weighted K-Means Clustering"
       subtitle="Jan 2025 · Sabanci Business School · Supervisor: Dr. Kemal Kılıç"
     >
-      Combined traditional RFM modeling with weighted K-Means clustering to predict
-      customer lifetime value across e-commerce segments.
+      Integrated RFM behavioral scoring with CLV-weighted K-Means clustering on a
+      2,239-customer grocery dataset. CLV weighting produced tighter, better-separated
+      segments (lower SSE, higher Silhouette Score) and correctly split the Loyal Customers
+      group by future value — a distinction invisible to standard RFM classification.
     </TimeLineElement>
   </div>
 
   <div class="text-xl font-semibold mb-3 opacity-80">Iran University of Science and Technology</div>
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="MSc Thesis — Multi-objective Robust Optimization for Remanufacturing"
+      title="MSc Thesis — Multi-objective Robust Optimization for Remanufacturing Systems"
       subtitle="Sep 2021 · School of Industrial Engineering · Supervisor: Dr. Ahmad Makui"
     >
-      Developed a multi-objective optimization model for hybrid manufacturing and
-      remanufacturing planning under uncertainty. Modeled uncertainty in the quality and
-      quantity of returned products, production times, and demand to enhance strategic
-      planning in closed-loop supply chains.
+      Developed and solved a multi-period, multi-objective robust MILP for hybrid
+      manufacturing and remanufacturing planning under simultaneous uncertainty in return
+      quality, processing times, and demand. NSGA-II outperformed MOPSO across all
+      Pareto-frontier quality metrics. Validated on an industrial case study, achieving a
+      14% reduction in total cost and 10% reduction in environmental impact relative to the
+      deterministic baseline.
     </TimeLineElement>
     <TimeLineElement
-      title="Conceptual and Mathematical Modeling in Remanufacturing Systems"
-      subtitle="Oct 2020 · School of Industrial Engineering · Supervisor: Dr. Ahmad Makui"
+      title="Sustainable Closed-Loop Supply Chain Network Design under Hybrid Uncertainty"
+      subtitle="Jan 2023 · School of Industrial Engineering · Supervisor: Dr. Morteza Ghomi-Avili"
     >
-      Conducted an extensive literature review evaluating analytical modeling approaches to
-      optimize recovery, reuse, and production planning within remanufacturing environments.
+      Formulated a multi-objective MILP for tire CLSC network design incorporating two
+      rounds of remanufacturing (retreading). Modelled demand stochasticity, fuzzy return
+      rates and quality, and worst-case cost disruptions within a unified robust-fuzzy-
+      stochastic programming framework. Solved with ε-constraint and NSGA-II.
     </TimeLineElement>
     <TimeLineElement
       title="Blockchain-Based Verification Frameworks for Supply Chain Transparency"
       subtitle="Jan 2023 · School of Industrial Engineering · Supervisor: Dr. Morteza Ghomi-Avili"
     >
-      Evaluated blockchain frameworks to enhance supply chain transparency, utilizing
-      decentralized digital records to ensure product originality and streamline partner
-      verification.
+      Analysed a blockchain-enabled closed-loop supply chain framework combining IoT/RFID
+      traceability, smart contract governance, and multi-objective fuzzy network
+      optimization. Examined how tamper-evident ledgers convert sustainability commitments
+      into auditable, self-executing supply chain governance.
     </TimeLineElement>
     <TimeLineElement
       title="Large-Scale Optimization of Healthcare Logistics via Benders Decomposition"
       subtitle="Dec 2019 · School of Industrial Engineering · Supervisor: Dr. Hadi Sahebi"
     >
-      Implemented a Benders decomposition algorithm in GAMS to efficiently solve a complex
-      optimization model for blood supply chain distribution.
+      Implemented a Benders decomposition scheme in GAMS for blood supply chain network
+      design — master problem on strategic facility decisions, subproblem on operational
+      flows subject to perishability and stochastic demand. Cut management achieved
+      near-optimal solutions at a fraction of the monolithic MILP solve time.
     </TimeLineElement>
     <TimeLineElement
       title="Review of Data-Driven Robust Optimization Methodologies"
       subtitle="Dec 2019 · School of Industrial Engineering · Supervisor: Dr. Mir Saman Pishvaee"
     >
-      Evaluated major data-driven robust optimization frameworks, analyzing methodologies
-      for integrating empirical data into uncertainty sets for complex decision-making
-      environments.
+      Surveyed major data-driven robust optimization frameworks — including uncertainty set
+      construction from empirical data, distributionally robust approaches, and
+      sample-average approximation — and evaluated their applicability to supply chain and
+      production planning problems.
     </TimeLineElement>
     <TimeLineElement
       title="Analytical Approaches in Multi-Modal Transportation Systems"
       subtitle="Jun 2019 · School of Industrial Engineering · Supervisor: Dr. Mahdi Hosseini-Motlagh"
     >
-      Reviewed analytical and optimization approaches for multi-modal transportation,
-      assessing their strategic relevance in complex logistics and transportation planning.
+      Reviewed optimization and analytical methods for multi-modal transportation planning,
+      examining trade-offs between cost, service level, and environmental impact in
+      integrated freight and logistics networks.
     </TimeLineElement>
     <TimeLineElement
-      title="Discrete-Event Queueing Simulation for Transportation Systems"
+      title="Discrete-Event Simulation for Transportation System Performance Analysis"
       subtitle="Jan 2019 · School of Industrial Engineering · Supervisor: Dr. Kamran Shahanaghi"
     >
-      Developed an Arena simulation model to evaluate system-wide transportation
-      performance, analyze queue dynamics, and identify operational bottlenecks.
+      Built an Arena discrete-event simulation of a multi-stage transportation system,
+      generating utilization profiles, queue-length distributions, and throughput sensitivity
+      curves. Identified that the binding bottleneck was the stage with the highest
+      utilization–variance product, not the highest mean utilization — a finding invisible
+      to deterministic network models.
     </TimeLineElement>
   </div>
 
@@ -195,25 +221,25 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container mb-10">
     <TimeLineElement
       title="Graduate Teaching Assistant — Sabanci Business School"
-      subtitle="Sep 2024 — Present · Sabanci University · Over 250 students"
+      subtitle="Sep 2024 — Present · Sabanci University · 250+ students across MBA and undergraduate programs"
     >
       <ul class="list-disc ml-5">
         <li>MKTG 560 — Applications in Digital Marketing (MBA) · Jan — Jun 2026</li>
         <li>BAN 801 — Marketing Analytics (MBA) · Jan — Jun 2026</li>
-        <li>MGMT 201 — Introduction to Management (110 undergrads) · Sep 2025 — Jan 2026</li>
-        <li>MGMT 402 — Entrepreneurship (30 undergrads) · Jan — Jun 2025</li>
-        <li>MGMT 201 — Introduction to Management (52 undergrads) · Jan — Jun 2025</li>
+        <li>MGMT 201 — Introduction to Management (110 undergraduates) · Sep 2025 — Jan 2026</li>
+        <li>MGMT 402 — Entrepreneurship (30 undergraduates) · Jan — Jun 2025</li>
+        <li>MGMT 201 — Introduction to Management (52 undergraduates) · Jan — Jun 2025</li>
         <li>OPIM 501 — Operations & Supply Chain Management (27 MBA) · Sep 2024 — Jan 2025</li>
-        <li>OPIM 390 — Introduction to Business Analytics (21 undergrads) · Sep 2024 — Jan 2025</li>
+        <li>OPIM 390 — Introduction to Business Analytics (21 undergraduates) · Sep 2024 — Jan 2025</li>
       </ul>
     </TimeLineElement>
     <TimeLineElement
       title="Graduate Teaching Assistant — School of Industrial Engineering"
-      subtitle="Jan 2019 — Jun 2024 · Iran University of Science and Technology · Over 70 students"
+      subtitle="Jan 2019 — Jun 2024 · Iran University of Science and Technology · 70+ students"
     >
       <ul class="list-disc ml-5">
-        <li>Research — Thesis advising for graduate students · Oct 2021 — Jun 2024</li>
-        <li>IE 201 — Engineering Economics (37 undergrads) · Jan — Jun 2019</li>
+        <li>Graduate thesis advising · Oct 2021 — Jun 2024</li>
+        <li>IE 201 — Engineering Economics (37 undergraduates) · Jan — Jun 2019</li>
       </ul>
     </TimeLineElement>
   </div>
@@ -224,32 +250,28 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
   <div class="grid md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
     <div>
-      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Methodology</div>
-      <p class="text-sm opacity-80">Robust Optimization · Stochastic Modelling · Data-driven Optimization · Integer Programming · Machine Learning · Experimental Design · Empirical Methods</p>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Research Methods</div>
+      <p class="text-sm opacity-80">Robust Optimization · Stochastic Programming · Integer Programming · Data-driven Optimization · Machine Learning · Experimental Design · Structural Equation Modeling</p>
     </div>
     <div>
       <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Programming</div>
-      <p class="text-sm opacity-80">Python · R · Git · MATLAB · Stata</p>
+      <p class="text-sm opacity-80">Python · R · MATLAB · Stata · Git</p>
     </div>
     <div>
-      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Optimization Tools</div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Optimization Solvers</div>
       <p class="text-sm opacity-80">Gurobi · GAMS · CPLEX</p>
     </div>
     <div>
-      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Analytics & Engineering</div>
-      <p class="text-sm opacity-80">Minitab · Vensim · SmartPLS · Arena · EViews · @Risk · Bizagi · Best Fit</p>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Simulation & Analytics</div>
+      <p class="text-sm opacity-80">Arena · SmartPLS · @Risk · Minitab · Vensim · EViews · Best Fit</p>
     </div>
     <div>
-      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Automation</div>
-      <p class="text-sm opacity-80">N8N · API Integration</p>
-    </div>
-    <div>
-      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">AI-Based Development</div>
-      <p class="text-sm opacity-80">Claude Code · Codex · Opencode</p>
-    </div>
-    <div>
-      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Reporting</div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Scientific Writing</div>
       <p class="text-sm opacity-80">LaTeX · Microsoft Office</p>
+    </div>
+    <div>
+      <div class="text-xs uppercase tracking-widest opacity-50 mb-2">Automation & AI Tools</div>
+      <p class="text-sm opacity-80">N8N · API Integration · Claude Code</p>
     </div>
   </div>
 
@@ -306,12 +328,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Honors & Awards</div>
   </div>
   <ul class="list-disc mx-6 mb-10 grid gap-1">
-    <li>Sabanci Business School Full Scholarship, PhD — Sep 2024</li>
+    <li>Full Scholarship, PhD in Business Analytics & Operations Management, Sabanci Business School — Sep 2024</li>
     <li>Ranked 4th among all graduate students, School of Industrial Engineering, IUST — Sep 2020</li>
-    <li>IUST Fellowship, master's degree — Sep 2018</li>
-    <li>Top 0.5% in Iran's Graduate Entrance Exam (Industrial Engineering) — Jul 2018</li>
-    <li>Amirkabir University of Technology Fellowship, bachelor's degree — Sep 2013</li>
-    <li>Top 2% among 252,000 in Iran's University Entrance Exam — Aug 2013</li>
+    <li>Fellowship recipient, MSc in Industrial Engineering, IUST — Sep 2018</li>
+    <li>Top 0.5% in Iran's Graduate Entrance Exam (Industrial Engineering field) — Jul 2018</li>
+    <li>Fellowship recipient, BSc in Industrial Engineering, Amirkabir University of Technology — Sep 2013</li>
+    <li>Top 2% among 252,000 candidates in Iran's National University Entrance Exam — Aug 2013</li>
   </ul>
 
   <!-- Hobbies -->
