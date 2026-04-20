@@ -1,7 +1,6 @@
 ---
 const { title, titlePrefix, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
-const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div class="group rounded-xl border border-base-300 hover-green-border hover:shadow-md hover:-translate-y-[2px] transition-all duration-200 ease-out">
@@ -31,12 +30,9 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           {tags && tags.length > 0 && (
             <div class="flex flex-wrap gap-1.5 justify-end">
               {tags.map((tag) => (
-                <a
-                  href={`${tag_url}/${tag}`}
-                  class="text-xs px-2.5 py-0.5 rounded-full border border-base-300 opacity-70 hover:opacity-100 transition-all duration-150"
-                >
+                <span class="text-xs px-2.5 py-0.5 rounded-full border border-base-300 opacity-70">
                   {tag}
-                </a>
+                </span>
               ))}
             </div>
           )}
