@@ -54,3 +54,8 @@ a:not(.btn):not([class*="badge"]):hover {
 .hover-green-border:hover {
   border-color: var(--site-green) !important;
 }
+
+/* Card link wrapper: don't cascade green to all children */
+a.card-link:hover {
+  color: inherit;
+}
