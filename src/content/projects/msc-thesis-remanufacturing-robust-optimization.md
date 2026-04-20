@@ -58,7 +58,3 @@ The validated model was applied to a real Iranian manufacturing company, providi
 ## Managerial Insight
 
 The robust model allows operations managers to explicitly trade off cost and environmental performance against schedule reliability. Modest increases in Γ significantly improve feasibility under disruption with small degradation in nominal objectives — a favorable exchange in industries where product return quality is genuinely unpredictable.
-
-## Status
-
-Working paper in progress — extending the thesis model for journal submission.

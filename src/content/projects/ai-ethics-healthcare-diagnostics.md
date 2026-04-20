@@ -4,7 +4,7 @@ description: "Evaluation of ethical risks in AI-based medical diagnostic systems
 pubDate: "2025-09-01"
 category: "Machine Learning"
 institution: "Sabanci University"
-supervisor: "DS440/CS540 — Responsible AI"
+supervisor: "Sabanci University"
 tags: ["AI Ethics", "Healthcare AI", "Explainability", "Contestability", "Deep Learning", "GRAD-CAM", "SHAP"]
 ---
 
@@ -53,7 +53,3 @@ The system monitors performance differences across patient groups — by age, ge
 
 ### Answerability
 Every prediction is accompanied by a clear, structured explanation — including relevant image regions, confidence scores, and the main factors influencing the decision — so clinicians can meaningfully assess whether the output is reliable and appropriate in its specific clinical context.
-
-## Status
-
-In progress — DS440/CS540 Responsible AI, Sabanci University, Spring 2026.

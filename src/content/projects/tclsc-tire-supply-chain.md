@@ -56,7 +56,3 @@ Combining these into a single tractable model is the technical contribution of t
 ## Solution
 
 The multi-objective problem is solved using the **ε-constraint method** for exact Pareto frontiers on small instances and **NSGA-II** for larger, industrially relevant scales. Sensitivity analysis on key parameters provides managerial guidance for supply chain designers operating under changing uncertainty levels.
-
-## Status
-
-Working paper · In progress

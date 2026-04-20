@@ -57,7 +57,3 @@ The model was implemented in **Python with Gurobi** and tested on instances cali
 - The Price of Robustness curve exhibited convex, well-behaved structure — providing hospital administrators with a transparent, quantitative basis for selecting a conservatism level aligned with institutional risk tolerance and staffing buffers.
 
 The central finding is that the marginal cost of robustness is modest relative to the operational disruption costs it prevents. For healthcare systems where nurse overload directly affects patient safety, this trade-off is highly favorable — and the integrated formulation is essential to capturing it correctly.
-
-## Status
-
-Ongoing — OPIM 611 Modelling in Operations Management, Sabanci University.
