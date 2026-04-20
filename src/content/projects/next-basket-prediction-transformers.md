@@ -1,7 +1,7 @@
 ---
 title: "Next-Basket Prediction using Bidirectional Transformers"
 description: "Progressive enhancement framework for e-commerce next-basket recommendation — replacing a GRU baseline with a bidirectional BERT4Rec Transformer and structured data augmentation, achieving a 4× improvement in Recall@10 on the Retail Rocket dataset."
-pubDate: "2025-06-01"
+pubDate: "2025-10-01"
 category: "Machine Learning"
 institution: "Sabanci University"
 supervisor: "Dr. Yücel Saygın"
