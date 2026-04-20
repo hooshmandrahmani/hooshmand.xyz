@@ -5,7 +5,8 @@ pubDate: "2022-06-01"
 category: "Supply Chain"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Morteza Ghomi-Avili"
-tags: ["Closed-Loop Supply Chain", "Network Design", "Robust Optimization", "Sustainability", "Remanufacturing"]
+tags: ["Closed-Loop Supply Chain", "Network Design", "Robust Optimization", "Fuzzy Programming", "Stochastic Programming", "Sustainability", "Remanufacturing"]
+badge: "Working Paper"
 ---
 
 ## Overview
@@ -39,18 +40,23 @@ The model simultaneously minimizes two conflicting objectives:
 - Where to locate collection, remanufacturing (Retread 1 and 2), and recycling centers
 - How much to flow across each network arc in each period
 
-## Uncertainty Modelling
+## Hybrid Uncertainty Approach
 
-The model handles three types of uncertainty:
+Real-world tire CLSCs face fundamentally different types of uncertainty that call for different mathematical treatments:
 
-| Uncertain Parameter | Representation |
+| Uncertainty Type | Mathematical Treatment |
 |---|---|
-| Market demand | Stochastic (multiple scenarios) |
-| Return rates (EOL tires from customers) | Fuzzy (triangular) |
-| Raw material purchase costs and production costs | Fuzzy (triangular) |
+| **Market demand** | Stochastic — modelled across multiple discrete scenarios with associated probabilities |
+| **Return rates and return quality** | Fuzzy — modelled with triangular membership functions capturing imprecise expert knowledge |
+| **Raw material and production costs** | Fuzzy — triangular distributions capturing price volatility |
+| **Worst-case disruptions** | Robust — budgeted uncertainty set protecting against adversarial parameter realizations |
 
-Fuzzy arithmetic expectations are incorporated into the objective function, and stochastic demand is modelled via multiple scenarios with associated probabilities.
+Combining these into a single tractable model is the technical contribution of the paper. Fuzzy parameters are de-fuzzified via expected value operators; stochastic demand is handled via scenario-based programming; and the robust counterpart immunizes the model against the remaining uncertainty budget.
+
+## Solution
+
+The multi-objective problem is solved using the **ε-constraint method** for exact Pareto frontiers on small instances and **NSGA-II** for larger, industrially relevant scales. Sensitivity analysis on key parameters provides managerial guidance for supply chain designers operating under changing uncertainty levels.
 
 ## Status
 
-Working paper. The model extends the IUST research on hybrid remanufacturing systems and contributes the multi-period network design formulation with two-tier retreading and explicit environmental accounting.
+Working paper · In progress

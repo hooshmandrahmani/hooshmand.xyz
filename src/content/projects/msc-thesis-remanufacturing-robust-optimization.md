@@ -6,6 +6,7 @@ category: "Optimization & Uncertainty Modelling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
 tags: ["Robust Optimization", "Multi-objective", "Remanufacturing", "NSGA-II", "MILP"]
+badge: "Working Paper"
 ---
 
 ## Overview
@@ -54,6 +55,10 @@ Performance was evaluated using:
 
 The validated model was applied to **Saze Puyesh**, a real Iranian manufacturing company, providing production and remanufacturing plans across multiple periods. Sensitivity analysis on key model parameters generated managerial recommendations for supply chain planners under changing uncertainty levels.
 
-## Connection to Working Papers
+## Managerial Insight
 
-This thesis is the foundation for two working papers referenced in my CV: one on hybrid manufacturing–remanufacturing planning (extending the model to a green closed-loop supply chain design) and one on Tire Closed-Loop Supply Chain network design under demand and return uncertainty.
+The robust model allows operations managers to explicitly trade off cost and environmental performance against schedule reliability. Modest increases in Γ significantly improve feasibility under disruption with small degradation in nominal objectives — a favorable exchange in industries where product return quality is genuinely unpredictable.
+
+## Status
+
+Working paper in progress — extending the thesis model for journal submission.
