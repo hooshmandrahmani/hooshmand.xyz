@@ -2,7 +2,7 @@
 title: "Green Closed-Loop Supply Chain for Remanufacturing with Robust Fuzzy Stochastic Programming"
 description: "Working paper designing a sustainable closed-loop supply chain for remanufacturing under hybrid uncertainty — combining robust optimization, fuzzy parameters, and stochastic demand scenarios to minimize cost and environmental impact jointly."
 pubDate: "2022-06-01"
-category: "Uncertainty Modelling"
+category: "Supply Chain"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
 tags: ["Closed-Loop Supply Chain", "Robust Optimization", "Fuzzy Programming", "Stochastic Programming", "Sustainability"]

@@ -2,7 +2,7 @@
 title: "The Integrated Healthcare Timetabling Problem — A Systematic Review"
 description: "PhD Summer Paper reviewing 50+ papers across Patient Admission Scheduling, Surgical Case Planning, and Nurse-to-Room Assignment — tracing the field from foundational metaheuristics to modern robust and stochastic models."
 pubDate: "2025-10-01"
-category: "Optimization"
+category: "Optimization & Uncertainty Modelling"
 institution: "Sabanci University"
 supervisor: "Dr. Can Akkan"
 tags: ["Literature Review", "Healthcare Scheduling", "Metaheuristics", "Robust Optimization", "IHTP"]

@@ -2,7 +2,7 @@
 title: "Multi-objective Robust Optimization for Hybrid Manufacturing and Remanufacturing Under Uncertainty"
 description: "Working paper extending the MSc thesis into a multi-period, multi-objective MILP for jointly planning new production and remanufacturing operations under simultaneous uncertainty in return quality, processing times, and demand."
 pubDate: "2022-01-01"
-category: "Uncertainty Modelling"
+category: "Supply Chain"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
 tags: ["Robust Optimization", "Multi-objective", "Remanufacturing", "MILP", "NSGA-II"]

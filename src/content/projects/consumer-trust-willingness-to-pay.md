@@ -2,7 +2,7 @@
 title: "Green Trust and Willingness-to-Pay for Agrivoltaic Products"
 description: "Working paper testing how green trust mediates the relationship between climate change risk awareness and consumers' willingness to pay a premium for agrivoltaic produce in Turkey, using PLS-SEM on a stratified national sample."
 pubDate: "2025-06-01"
-category: "Supply Chain"
+category: "Empirical Research"
 institution: "Sabanci University"
 supervisor: "Dr. Melek Akın Ateş"
 tags: ["SEM", "PLS-SEM", "Agrivoltaics", "Willingness-to-Pay", "Sustainability"]
