@@ -11,42 +11,44 @@ const last_projects = projects.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hello</div>
-    <div class="text-5xl font-bold">I'm Hooshmand Rahmani</div>
-    <div class="text-3xl py-3 font-bold">
+  <div class="pb-10 mt-5">
+    <div class="text-base opacity-50 tracking-widest uppercase mb-2">Hello</div>
+    <div class="text-5xl font-bold leading-tight tracking-tight">I'm Hooshmand Rahmani</div>
+    <div class="text-xl mt-3 opacity-60 font-medium">
       PhD Researcher · Industrial Engineer · Operations Research
     </div>
-    <div class="py-2">
-      <p class="text-lg">
+    <div class="mt-6 space-y-3">
+      <p class="text-lg leading-relaxed">
         I'm a PhD researcher in Business Analytics and Operations Management at
         <b>Sabanci University</b>, with a background in industrial engineering. My work focuses
         on mathematical modelling and data-driven decision systems — translating complex,
         uncertain operational problems into rigorous models that support better decisions.
       </p>
-      <p class="text-lg mt-3">
+      <p class="text-lg leading-relaxed">
         My research spans robust optimization, stochastic modelling, integer programming, and
         machine learning, with applications in healthcare operations, sustainable supply
         chains, and remanufacturing systems. I also teach and support over 250 MBA and
         undergraduate students at Sabanci Business School.
       </p>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="/projects">Projects</a>
-      <a class="btn btn-outline ml-2" href="/cv">View CV</a>
-      <a class="btn btn-outline ml-2" href="/contact">Contact</a>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a class="btn btn-neutral px-6" href="/projects">Projects</a>
+      <a class="btn btn-outline px-6" href="/cv">View CV</a>
+      <a class="btn btn-outline px-6" href="/contact">Contact</a>
     </div>
   </div>
 
-  <div class="mb-6">
-    <div class="text-3xl w-full font-bold mb-2">Current Focus</div>
-    <p class="text-lg">
+  <div class="divider my-4"></div>
+
+  <div class="mb-8 p-5 rounded-2xl bg-base-200 border border-base-300/60">
+    <div class="text-xs uppercase tracking-widest opacity-40 mb-1">Current Focus</div>
+    <p class="text-base leading-relaxed">
       Robust optimization and stochastic modelling for healthcare operations and sustainable supply chains.
     </p>
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Recent projects</div>
+  <div class="mb-4">
+    <div class="text-2xl font-bold">Recent projects</div>
   </div>
 
   {

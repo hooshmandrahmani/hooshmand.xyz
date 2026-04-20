@@ -1,9 +1,21 @@
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main p, main li {
   text-align: justify;
+}
+
+/* Global smooth transitions for interactive elements */
+a, button {
+  transition: all 0.18s ease;
+}
+
+/* Refined divider */
+.divider {
+  opacity: 0.4;
 }
 
 .time-line-container>div:last-child .education__time>.education__line {
