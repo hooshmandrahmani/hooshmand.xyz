@@ -4,7 +4,7 @@ description: "Working paper. Multi-objective MILP for designing a sustainable ti
 pubDate: "2021-08-01"
 category: "Optimization & Uncertainty Modelling"
 institution: "Iran University of Science and Technology"
-supervisor: "Dr. Morteza Ghomi-Avili"
+supervisor: "Dr. Ahmad Makui"
 tags: ["Closed-Loop Supply Chain", "Network Design", "Robust Optimization", "Fuzzy Programming", "Stochastic Programming", "Sustainability", "Remanufacturing"]
 badge: "Working Paper"
 ---
