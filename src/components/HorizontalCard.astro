@@ -22,11 +22,11 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
       <div class="grow w-full">
         <h1 class="text-lg font-semibold leading-snug">
           {titlePrefix && <span class="text-[#3A9E6E]">{titlePrefix} — </span>}{title}
-          {badge && <span class="badge badge-secondary ml-2 text-xs">{badge}</span>}
         </h1>
         <p class="mt-2 text-sm opacity-70 leading-relaxed">{desc}</p>
         <div class="flex items-center justify-between mt-3 flex-wrap gap-2">
-          <span class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity duration-150">
+          <span class="flex items-center gap-2 text-sm font-medium opacity-60 hover:opacity-100 transition-opacity duration-150">
+            {badge && <span class="badge badge-secondary text-xs">{badge}</span>}
             Read more about the project →
           </span>
           {tags && tags.length > 0 && (
