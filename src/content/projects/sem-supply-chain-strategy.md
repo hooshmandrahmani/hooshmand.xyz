@@ -2,7 +2,7 @@
 title: "Structural Equation Modeling for Supply Chain Strategy and Environmental Performance"
 description: "Two-part quantitative research project using EFA, moderation/mediation analysis, and PLS-SEM to study how purchasing recognition, long-term supplier commitment, and proactive environmental strategies drive supply chain performance across Turkish manufacturing firms."
 pubDate: "2025-06-01"
-category: "Supply Chain"
+category: "Empirical Research"
 institution: "Sabanci University"
 supervisor: "Dr. Melek Akın Ateş"
 tags: ["PLS-SEM", "SEM", "SmartPLS", "Supply Chain", "Environmental Performance", "Quantitative Methods"]

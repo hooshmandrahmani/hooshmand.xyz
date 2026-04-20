@@ -2,7 +2,7 @@
 title: "Economic Incentives and Household Waste Reduction — A Prospect Theory Experiment"
 description: "Controlled experiment testing fines, subsidies, and baseline conditions on household waste production over 10 days — confirming loss aversion: the fine (loss frame) produced a 28% reduction vs. 8% for the subsidy, consistent with Prospect Theory."
 pubDate: "2025-01-01"
-category: "Supply Chain"
+category: "Empirical Research"
 institution: "Sabanci University"
 supervisor: "Dr. Ayşe Kocabıyıkoğlu"
 tags: ["Prospect Theory", "Behavioral Economics", "Experimental Design", "Sustainability", "Waste Management"]

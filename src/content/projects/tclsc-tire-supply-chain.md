@@ -2,7 +2,7 @@
 title: "Tire Closed-Loop Supply Chain Network Design under Uncertainty"
 description: "Working paper. Multi-objective MILP for designing a sustainable tire supply chain with two rounds of remanufacturing (retreading) — minimizing cost and environmental impact under stochastic demand and fuzzy return and production rates."
 pubDate: "2022-06-01"
-category: "Supply Chain"
+category: "Uncertainty Modelling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Morteza Ghomi-Avili"
 tags: ["Closed-Loop Supply Chain", "Network Design", "Robust Optimization", "Sustainability", "Remanufacturing"]
