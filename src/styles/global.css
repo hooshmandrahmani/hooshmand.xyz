@@ -21,3 +21,9 @@ a, button {
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+.divider-green::before,
+.divider-green::after {
+  background-color: #2E7D55;
+  opacity: 0.4;
+}
