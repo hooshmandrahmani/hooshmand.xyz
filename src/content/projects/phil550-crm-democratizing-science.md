@@ -1,8 +1,8 @@
 ---
 title: "CRM Systems as Platforms for Democratizing Corporate Science"
 description: "Philosophy of science paper arguing that Customer Relationship Management systems can be redesigned as epistemic interfaces — linking diverse stakeholder knowledge with corporate R&D agendas through frameworks of well-ordered science, hybrid forums, and epistemic justice."
-pubDate: "2025-09-10"
-category: "Machine Learning"
+pubDate: "2024-12-01"
+category: "Empirical Research"
 institution: "Sabanci University"
 supervisor: "Prof. Gürol Irzık"
 tags: ["Philosophy of Science", "CRM", "Epistemic Justice", "Science Governance", "Participatory Research"]
