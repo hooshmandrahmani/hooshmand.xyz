@@ -67,9 +67,9 @@ const categories = [
     }
 
     // Intercept sidebar category clicks only when already on this page
-    document.querySelectorAll('a[href^="/projects#"]').forEach((link) => {
+    document.querySelectorAll('a[href^="/projects/#"]').forEach((link) => {
       link.addEventListener("click", (e) => {
-        if (window.location.pathname !== "/projects") return;
+        if (window.location.pathname !== "/projects/") return;
         e.preventDefault();
         const id = (link.getAttribute("href") as string).split("#")[1];
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
