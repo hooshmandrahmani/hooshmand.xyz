@@ -22,9 +22,35 @@ a, button {
     padding-bottom: 0;
 }
 
+/* Green dividers between cards */
 .divider-green::before,
 .divider-green::after {
   background-color: #3DAA72;
   opacity: 0.55;
   height: 2px;
+}
+
+/* ── Site-wide green accent system ─────────────────────────── */
+[data-theme="hooshmand"] {
+  --site-green: #2E7D55;
+}
+[data-theme="hooshmand-dark"] {
+  --site-green: #3DAA72;
+}
+
+/* Plain links (not buttons, not badges) turn green on hover */
+a:not(.btn):not([class*="badge"]):hover {
+  color: var(--site-green);
+}
+
+/* Outline buttons fill green on hover */
+.btn-outline:hover {
+  background-color: var(--site-green) !important;
+  border-color: var(--site-green) !important;
+  color: #ffffff !important;
+}
+
+/* Cards and timeline entries: border turns green on hover */
+.hover-green-border:hover {
+  border-color: var(--site-green) !important;
 }
