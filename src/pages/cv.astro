@@ -368,7 +368,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
           <a href="https://www.duolingo.com/profile/hooshmand" target="_blank"
             id="duolingo-it"
             class="w-full block text-xs font-semibold text-white rounded-full px-3 py-1 text-center transition-opacity duration-150 hover:opacity-90"
-            style="background-color:#58CC02;">Duolingo · 10 XP ↗</a>
+            style="background-color:#58CC02;">Duolingo score 10 ↗</a>
         </div>
       </div>
     </div>
@@ -386,7 +386,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
           <a href="https://www.duolingo.com/profile/hooshmand" target="_blank"
             id="duolingo-tr"
             class="w-full block text-xs font-semibold text-white rounded-full px-3 py-1 text-center transition-opacity duration-150 hover:opacity-90"
-            style="background-color:#58CC02;">Duolingo · 11 XP ↗</a>
+            style="background-color:#58CC02;">Duolingo score 11 ↗</a>
         </div>
       </div>
     </div>
@@ -406,8 +406,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         const tr = courses.find((c: any) => c.learningLanguage === 'tr');
         const elIt = document.getElementById('duolingo-it');
         const elTr = document.getElementById('duolingo-tr');
-        if (it && elIt) elIt.textContent = `Duolingo · ${it.xp} XP ↗`;
-        if (tr && elTr) elTr.textContent = `Duolingo · ${tr.xp} XP ↗`;
+        if (it && elIt) elIt.textContent = `Duolingo score ${it.xp} ↗`;
+        if (tr && elTr) elTr.textContent = `Duolingo score ${tr.xp} ↗`;
       } catch {
         // silently keep the hardcoded fallback values
       }
