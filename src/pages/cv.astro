@@ -2,21 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 
-let itScore = 10;
-let trScore = 11;
-try {
-  const res = await fetch(
-    "https://www.duolingo.com/2017-06-30/users?username=hooshmand&fields=courses"
-  );
-  if (res.ok) {
-    const data = await res.json();
-    const courses = data.users?.[0]?.courses ?? [];
-    const it = courses.find((c: any) => c.learningLanguage === "it");
-    const tr = courses.find((c: any) => c.learningLanguage === "tr");
-    if (it) itScore = it.xp;
-    if (tr) trScore = tr.xp;
-  }
-} catch {}
+const itScore = 10;
+const trScore = 11;
 ---
 
 <BaseLayout title="CV" sideBarActiveItemID="cv">
