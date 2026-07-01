@@ -5,7 +5,7 @@ pubDate: "2021-08-01"
 category: "Optimization & Uncertainty Modelling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
-tags: ["MILP", "Robust Optimization", "Stochastic Programming", "Remanufacturing"]
+tags: ["MILP", "Robust Optimization", "Stochastic Programming", "Fuzzy Programming", "Benders Decomposition", "Remanufacturing"]
 badge: "Working Paper"
 ---
 
@@ -47,12 +47,11 @@ Real-world tire CLSCs face fundamentally different types of uncertainty that cal
 | Uncertainty Type | Mathematical Treatment |
 |---|---|
 | **Market demand** | Stochastic — modelled across multiple discrete scenarios with associated probabilities |
-| **Return rates and return quality** | Fuzzy — modelled with triangular membership functions capturing imprecise expert knowledge |
-| **Raw material and production costs** | Fuzzy — triangular distributions capturing price volatility |
-| **Worst-case disruptions** | Robust — budgeted uncertainty set protecting against adversarial parameter realizations |
+| **Return, remanufacturing, and recycling rates** | Fuzzy — modelled with trapezoidal membership functions capturing imprecise expert knowledge |
+| **Raw material and production costs** | Fuzzy — trapezoidal numbers capturing price volatility |
 
-Combining these into a single tractable model is the technical contribution of the paper. Fuzzy parameters are de-fuzzified via expected value operators; stochastic demand is handled via scenario-based programming; and the robust counterpart immunizes the model against the remaining uncertainty budget.
+Combining these into a single tractable model is the technical contribution of the paper. The two uncertainty types are unified within a **Robust Fuzzy Stochastic Programming (RFSP)** framework (Farrokh et al., 2018). Fuzzy parameters are handled via credibility measures and fuzzy expected-value operators; stochastic demand is captured through scenario-based programming; and robustness is enforced by a Mulvey-type robust term (in the linearized Yu–Li form) that penalizes both scenario deviation of the objective and constraint infeasibility, controlling solution and feasibility robustness simultaneously.
 
 ## Solution
 
-The multi-objective problem is solved using the **ε-constraint method** for exact Pareto frontiers on small instances and **NSGA-II** for larger, industrially relevant scales. Sensitivity analysis on key parameters provides managerial guidance for supply chain designers operating under changing uncertainty levels.
+The bi-objective problem is scalarized using the **augmented ε-constraint (AEC) method**, with the ε-ranges obtained via a lexicographic (payoff-table) procedure to generate an efficient Pareto frontier. For large, industrially relevant instances, the model is solved with **Benders decomposition** — treating the network-design binaries (facility location and capacity) as the complicating variables, so the problem splits into a master problem over the design decisions and a dual subproblem over the continuous network flows, with optimality and feasibility cuts added iteratively. This preserves global optimality while keeping large instances tractable. Sensitivity analysis on key parameters provides managerial guidance for supply chain designers operating under changing uncertainty levels.
