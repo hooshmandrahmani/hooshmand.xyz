@@ -1,5 +1,5 @@
 ---
-title: "How Firms Actually Use AI in Procurement"
+title: "Patterns of AI Use in Procurement and Firm Performance"
 description: "Ongoing PhD research measuring not whether firms adopt AI in procurement, but how they use it (its extent, locus, and depth across the purchasing process) and linking those patterns to cost performance, supply chain resilience, and sustainability."
 pubDate: "2026-07-01"
 category: "Empirical Research"
