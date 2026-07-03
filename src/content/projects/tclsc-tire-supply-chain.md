@@ -1,6 +1,6 @@
 ---
 title: "Tire Closed-Loop Supply Chain Network Design under Uncertainty"
-description: "Working paper. Multi-objective MILP for designing a sustainable tire supply chain with two rounds of remanufacturing (retreading) — minimizing cost and environmental impact under stochastic demand and fuzzy return and production rates."
+description: "Working paper. Multi-objective MILP for designing a sustainable tire supply chain with two rounds of remanufacturing (retreading), minimizing cost and environmental impact under stochastic demand and fuzzy return and production rates."
 pubDate: "2021-08-01"
 category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
@@ -11,7 +11,7 @@ badge: "Working Paper"
 
 ## Overview
 
-Tires are one of the most environmentally problematic end-of-life products: non-biodegradable, difficult to dispose of safely, and highly energy-intensive to manufacture. Closed-loop supply chain (CLSC) design — incorporating collection, remanufacturing, recycling, and disposal alongside forward production and distribution — is both an operational necessity and a sustainability imperative for tire manufacturers.
+Tires are one of the most environmentally problematic end-of-life products: non-biodegradable, difficult to dispose of safely, and highly energy-intensive to manufacture. Closed-loop supply chain (CLSC) design, which incorporates collection, remanufacturing, recycling, and disposal alongside forward production and distribution, is both an operational necessity and a sustainability imperative for tire manufacturers.
 
 This working paper, developed at Iran University of Science and Technology, formulates a **Tier Closed-Loop Supply Chain (TCLSC)** network design model that jointly optimizes economic and environmental objectives under multiple sources of uncertainty.
 
@@ -46,12 +46,12 @@ Real-world tire CLSCs face fundamentally different types of uncertainty that cal
 
 | Uncertainty Type | Mathematical Treatment |
 |---|---|
-| **Market demand** | Stochastic — modeled across multiple discrete scenarios with associated probabilities |
-| **Return, remanufacturing, and recycling rates** | Fuzzy — modeled with trapezoidal membership functions capturing imprecise expert knowledge |
-| **Raw material and production costs** | Fuzzy — trapezoidal numbers capturing price volatility |
+| **Market demand** | Stochastic: modeled across multiple discrete scenarios with associated probabilities |
+| **Return, remanufacturing, and recycling rates** | Fuzzy: modeled with trapezoidal membership functions capturing imprecise expert knowledge |
+| **Raw material and production costs** | Fuzzy: trapezoidal numbers capturing price volatility |
 
 Combining these into a single tractable model is the technical contribution of the paper. The two uncertainty types are unified within a **Robust Fuzzy Stochastic Programming (RFSP)** framework (Farrokh et al., 2018). Fuzzy parameters are handled via credibility measures and fuzzy expected-value operators; stochastic demand is captured through scenario-based programming; and robustness is enforced by a Mulvey-type robust term (in the linearized Yu–Li form) that penalizes both scenario deviation of the objective and constraint infeasibility, controlling solution and feasibility robustness simultaneously.
 
 ## Solution
 
-The bi-objective problem is scalarized using the **augmented ε-constraint (AEC) method**, with the ε-ranges obtained via a lexicographic (payoff-table) procedure to generate an efficient Pareto frontier. For large, industrially relevant instances, the model is solved with **Benders decomposition** — treating the network-design binaries (facility location and capacity) as the complicating variables, so the problem splits into a master problem over the design decisions and a dual subproblem over the continuous network flows, with optimality and feasibility cuts added iteratively. This preserves global optimality while keeping large instances tractable. Sensitivity analysis on key parameters provides managerial guidance for supply chain designers operating under changing uncertainty levels.
+The bi-objective problem is scalarized using the **augmented ε-constraint (AEC) method**, with the ε-ranges obtained via a lexicographic (payoff-table) procedure to generate an efficient Pareto frontier. For large, industrially relevant instances, the model is solved with **Benders decomposition**, treating the network-design binaries (facility location and capacity) as the complicating variables so that the problem splits into a master problem over the design decisions and a dual subproblem over the continuous network flows, with optimality and feasibility cuts added iteratively. This preserves global optimality while keeping large instances tractable. Sensitivity analysis on key parameters provides managerial guidance for supply chain designers operating under changing uncertainty levels.

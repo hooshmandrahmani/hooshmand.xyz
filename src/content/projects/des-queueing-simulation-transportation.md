@@ -1,6 +1,6 @@
 ---
 title: "Discrete-Event Simulation for Transportation System Performance Analysis"
-description: "Arena-based discrete-event simulation of a multi-stage transportation system — generating utilization profiles, queue-length distributions, and throughput sensitivity curves to identify binding bottlenecks and evaluate the system-wide impact of operational interventions."
+description: "Arena-based discrete-event simulation of a multi-stage transportation system, generating utilization profiles, queue-length distributions, and throughput sensitivity curves to identify binding bottlenecks and evaluate the system-wide impact of operational interventions."
 pubDate: "2019-01-01"
 category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
@@ -9,13 +9,13 @@ tags: ["Arena", "Discrete-Event Simulation", "Queueing Theory", "Bottleneck Anal
 
 ## Overview
 
-Operational performance in multi-stage transportation systems cannot be reliably inferred from aggregate statistics alone. Average throughput and mean queue lengths obscure the variance structure that drives congestion, delay propagation, and service degradation — particularly when arrival processes and service times are stochastic. Identifying true system bottlenecks requires a model that explicitly captures the temporal dynamics of entity flow, resource contention, and queue accumulation under realistic variability.
+Operational performance in multi-stage transportation systems cannot be reliably inferred from aggregate statistics alone. Average throughput and mean queue lengths obscure the variance structure that drives congestion, delay propagation, and service degradation, particularly when arrival processes and service times are stochastic. Identifying true system bottlenecks requires a model that explicitly captures the temporal dynamics of entity flow, resource contention, and queue accumulation under realistic variability.
 
 This project develops a **discrete-event simulation (DES)** model of a multi-stage transportation system in **Arena**, exploiting the ability of DES to represent stochastic processes, resource interactions, and time-dependent congestion that closed-form queueing models cannot capture at this level of operational fidelity.
 
-## Modelling Approach
+## Modeling Approach
 
-The simulation represents the transportation system as a network of processing stages, each characterized by stochastic arrival processes and service time distributions calibrated to operational data. Entities (vehicles, shipments, or passengers — depending on context) flow through the network, competing for shared resources at each stage.
+The simulation represents the transportation system as a network of processing stages, each characterized by stochastic arrival processes and service time distributions calibrated to operational data. Entities (vehicles, shipments, or passengers, depending on context) flow through the network, competing for shared resources at each stage.
 
 Key modeling decisions:
 
@@ -32,10 +32,10 @@ The simulation generates a comprehensive performance profile:
 - **Queue-length distributions**: not just mean queue lengths but full distributional characterization, exposing tail behavior that drives worst-case delays
 - **Throughput sensitivity**: systematic perturbation of arrival rates and service time parameters to map how system throughput responds to demand variation and service disruption
 
-The bottleneck identification approach — tracing the propagation of queue build-up through the network — avoids the common error of inferring bottleneck location from headline utilization averages, which can misidentify secondary congestion as primary constraint.
+The bottleneck identification approach, which traces the propagation of queue build-up through the network, avoids the common error of inferring bottleneck location from headline utilization averages, which can misidentify secondary congestion as primary constraint.
 
 ## Key Finding
 
-The binding bottleneck in the system was not the stage with the highest nominal utilization, but rather the stage with the highest combination of utilization and service time variance — a finding that emerges clearly from the distributional output of the simulation but would be invisible to a deterministic network model. Targeted capacity expansion at this stage produced disproportionate system-wide throughput improvements, while equivalent investment at the nominally busiest stage yielded negligible gains.
+The binding bottleneck in the system was not the stage with the highest nominal utilization, but rather the stage with the highest combination of utilization and service time variance. This finding emerges clearly from the distributional output of the simulation but would be invisible to a deterministic network model. Targeted capacity expansion at this stage produced disproportionate system-wide throughput improvements, while equivalent investment at the nominally busiest stage yielded negligible gains.
 
 This result illustrates a general principle: in stochastic service systems, variance matters as much as mean capacity, and simulation is the appropriate tool for surfacing this structure.

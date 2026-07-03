@@ -10,7 +10,7 @@ I spend my days on: **robust and stochastic optimization**, operations research 
 to healthcare and supply chains, the odd note on teaching, and whatever research rabbit
 hole I'm currently stuck in.
 
-I'm Hooshmand Rahmani — a PhD researcher in Business Analytics and Operations Management
+I'm Hooshmand Rahmani, a PhD researcher in Business Analytics and Operations Management
 at Sabanci University in Istanbul. If you'd like the formal version, the [CV](/cv) has
 all the details. If you'd like to get in touch,
 [email me](mailto:hooshmand.rahmani@sabanciuniv.edu).

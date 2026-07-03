@@ -1,6 +1,6 @@
 ---
 title: "The Integrated Healthcare Timetabling Problem — A Systematic Review"
-description: "Structured literature review of 50+ papers across Patient Admission Scheduling, Surgical Case Planning, and Nurse-to-Room Assignment — mapping the field from foundational metaheuristics to modern robust and stochastic models, and establishing the methodological frontier for fully integrated planning."
+description: "Structured literature review of 50+ papers across Patient Admission Scheduling, Surgical Case Planning, and Nurse-to-Room Assignment, mapping the field from foundational metaheuristics to modern robust and stochastic models and establishing the methodological frontier for fully integrated planning."
 pubDate: "2025-10-15"
 category: "Optimization & Uncertainty Modeling"
 institution: "Sabanci University"
@@ -10,7 +10,7 @@ tags: ["Literature Review", "Healthcare Scheduling", "Metaheuristics", "Robust O
 
 ## Overview
 
-Hospital operations involve a web of deeply interdependent decisions: which patients are admitted on which days, which surgeries are scheduled in which operating theaters, and which nurses are assigned to which rooms across each shift. Treating these as independent scheduling problems — the prevailing approach in both practice and earlier research — produces plans that are locally optimal in each sub-system but globally infeasible or inefficient once operational dependencies materialize.
+Hospital operations involve a web of deeply interdependent decisions: which patients are admitted on which days, which surgeries are scheduled in which operating theaters, and which nurses are assigned to which rooms across each shift. Treating these as independent scheduling problems (the prevailing approach in both practice and earlier research) produces plans that are locally optimal in each sub-system but globally infeasible or inefficient once operational dependencies materialize.
 
 This review provides a structured synthesis of the **Integrated Healthcare Timetabling Problem (IHTP)**, defined formally for the 2024 International Healthcare Timetabling Competition (IHTC 2024), which simultaneously combines three NP-hard sub-problems. The goal is to establish where the field stands methodologically and to identify the gaps that motivate integrated modeling under uncertainty.
 
@@ -18,7 +18,7 @@ This review provides a structured synthesis of the **Integrated Healthcare Timet
 
 ### Patient Admission Scheduling (PAS)
 
-PAS assigns elective patients to hospital beds for the duration of their stay, subject to room capacity constraints, gender policies, specialty requirements, and patient–room compatibility. The literature begins with foundational metaheuristics — Simulated Annealing (Ceschia & Schaerf, 2011), Genetic Algorithms, Artificial Bee Colony — and progresses through exact decomposition methods (column generation with dynamic constraint aggregation; Range et al., 2014) to modern uncertainty-aware models that treat length-of-stay as a stochastic parameter rather than a fixed input (Gartner et al., 2023).
+PAS assigns elective patients to hospital beds for the duration of their stay, subject to room capacity constraints, gender policies, specialty requirements, and patient–room compatibility. The literature begins with foundational metaheuristics such as Simulated Annealing (Ceschia & Schaerf, 2011), Genetic Algorithms, and Artificial Bee Colony, and progresses through exact decomposition methods (column generation with dynamic constraint aggregation; Range et al., 2014) to modern uncertainty-aware models that treat length-of-stay as a stochastic parameter rather than a fixed input (Gartner et al., 2023).
 
 ### Surgical Case Planning (SCP)
 
@@ -34,9 +34,9 @@ Following Rachuba et al. (2024), integration approaches are classified into thre
 
 | Level | Description | Limitation |
 |---|---|---|
-| **Level 1 — Linked by Constraints** | Sub-problems solved independently with static constraints passed between them | Ignores dynamic coupling; may be locally infeasible |
-| **Level 2 — Sequential Planning** | Output of one stage becomes fixed input for the next | Amplifies upstream errors; no recovery mechanism |
-| **Level 3 — Fully Integrated** | All resources optimized jointly in a single model | Computationally hardest; only approach with global optimality guarantees |
+| **Level 1: Linked by Constraints** | Sub-problems solved independently with static constraints passed between them | Ignores dynamic coupling; may be locally infeasible |
+| **Level 2: Sequential Planning** | Output of one stage becomes fixed input for the next | Amplifies upstream errors; no recovery mechanism |
+| **Level 3: Fully Integrated** | All resources optimized jointly in a single model | Computationally hardest; only approach with global optimality guarantees |
 
 The review focuses on Level 3 approaches and the methodological challenges they introduce: tractability of a model combining three NP-hard sub-problems, objective function design for competing soft constraints, and robustness to the operational uncertainty inherent in real hospital environments.
 
@@ -53,4 +53,4 @@ The review covers the full spectrum of published methods:
 
 The IHTC 2024 competition results confirm that no single method dominates across all instance scales. For smaller instances, exact MIP formulations produce provably optimal solutions; for larger, operationally realistic instances, matheuristics combining an exact solver with large-neighborhood search currently define the state of the art in solution quality within practical time limits.
 
-The most significant gap in the literature remains the joint treatment of integration and uncertainty: the majority of fully integrated models assume deterministic inputs, while uncertainty-aware models typically operate on individual sub-problems rather than the coupled system. Closing this gap — building robust or stochastic models that respect the full operational coupling — is both an open research problem and a practical necessity for real hospital deployment.
+The most significant gap in the literature remains the joint treatment of integration and uncertainty: the majority of fully integrated models assume deterministic inputs, while uncertainty-aware models typically operate on individual sub-problems rather than the coupled system. Closing this gap, by building robust or stochastic models that respect the full operational coupling, is both an open research problem and a practical necessity for real hospital deployment.

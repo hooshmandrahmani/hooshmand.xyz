@@ -1,7 +1,7 @@
 ---
 title: "Multi-objective Robust Optimization for Remanufacturing Systems"
 titlePrefix: "MSc Thesis"
-description: "Multi-period, multi-objective robust MILP for hybrid manufacturing and remanufacturing planning under simultaneous uncertainty in return quality, processing times, and demand — solved with NSGA-II and validated on a real industrial case."
+description: "Multi-period, multi-objective robust MILP for hybrid manufacturing and remanufacturing planning under simultaneous uncertainty in return quality, processing times, and demand, solved with NSGA-II and validated on a real industrial case."
 pubDate: "2025-09-20"
 category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
@@ -12,7 +12,7 @@ badge: "Working Paper"
 
 ## Overview
 
-Growing population, shorter product life cycles, and tightening environmental regulation have made **remanufacturing** — returning used products to original quality standards rather than discarding or merely recycling them — economically and ecologically essential. Unlike simple recycling (material recovery), remanufacturing recovers value-added functionality, significantly reducing energy consumption and production costs.
+Growing population, shorter product life cycles, and tightening environmental regulation have made **remanufacturing** (returning used products to original quality standards rather than discarding or merely recycling them) economically and ecologically essential. Unlike simple recycling (material recovery), remanufacturing recovers value-added functionality, significantly reducing energy consumption and production costs.
 
 This thesis, completed at Iran University of Science and Technology under Dr. Ahmad Makui, develops a mathematical model for planning hybrid manufacturing–remanufacturing operations under the three sources of uncertainty that make the problem genuinely hard.
 
@@ -20,9 +20,9 @@ This thesis, completed at Iran University of Science and Technology under Dr. Ah
 
 A hybrid system produces both new products and remanufactured ones using the same facilities, competing for the same capacity. Three uncertainty dimensions are modeled simultaneously:
 
-1. **Return quality** — the condition of returned products is unknown until inspection; poor-quality returns require more reprocessing time and may be non-remanufacturable.
-2. **Processing and reprocessing times** — variability in disassembly, refurbishment, and assembly operations.
-3. **Demand** — market demand for both new and remanufactured products fluctuates across the planning horizon.
+1. **Return quality**: the condition of returned products is unknown until inspection; poor-quality returns require more reprocessing time and may be non-remanufacturable.
+2. **Processing and reprocessing times**: variability in disassembly, refurbishment, and assembly operations.
+3. **Demand**: market demand for both new and remanufactured products fluctuates across the planning horizon.
 
 Ignoring any one of these dimensions produces plans that frequently become infeasible or sub-optimal in practice.
 
@@ -58,4 +58,4 @@ The validated model was applied to a real Iranian manufacturing company, providi
 
 ## Managerial Insight
 
-The robust model allows operations managers to explicitly trade off cost and environmental performance against schedule reliability. Modest increases in Γ significantly improve feasibility under disruption with small degradation in nominal objectives — a favorable exchange in industries where product return quality is genuinely unpredictable.
+The robust model allows operations managers to explicitly trade off cost and environmental performance against schedule reliability. Modest increases in Γ significantly improve feasibility under disruption with small degradation in nominal objectives, a favorable exchange in industries where product return quality is genuinely unpredictable.

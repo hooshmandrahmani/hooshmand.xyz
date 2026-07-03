@@ -14,15 +14,15 @@ Two enduring questions in supply chain management concern how organizational cap
 
 This project addresses both questions empirically, using survey data from manufacturing firms across the food & beverage, chemicals, and machinery sectors in Turkey, and applying state-of-the-art structural equation modeling methods.
 
-## Part 1 — Purchasing Recognition, Supplier Integration, and Performance
+## Part 1: Purchasing Recognition, Supplier Integration, and Performance
 
 ### Research Question
 
-Does top-management recognition of the purchasing function drive supplier integration, and does integration in turn improve purchasing performance? What is the relative role of long-term commitment — as moderator of the recognition–integration relationship, or as a parallel driver of performance?
+Does top-management recognition of the purchasing function drive supplier integration, and does integration in turn improve purchasing performance? What is the relative role of long-term commitment: moderator of the recognition–integration relationship, or parallel driver of performance?
 
 ### Design and Constructs
 
-The study evaluates two competing structural configurations — a moderation model and a mediation model — across four constructs, each measured with five Likert-scale items:
+The study evaluates two competing structural configurations (a moderation model and a mediation model) across four constructs, each measured with five Likert-scale items:
 
 - **Purchasing Recognition (R)**: extent to which top management values and strategically supports the purchasing department
 - **Long-term Commitment (L)**: firm's commitment to sustained, strategic supplier relationships
@@ -32,16 +32,16 @@ The study evaluates two competing structural configurations — a moderation mod
 ### Methods
 
 - **Exploratory Factor Analysis (EFA)**: maximum likelihood extraction with varimax rotation; Bartlett's sphericity test; Kaiser-Meyer-Olkin measure; parallel analysis for factor retention
-- Construct reliability: Cronbach's Alpha — R = 0.93, L = 0.89, I = 0.91
+- Construct reliability: Cronbach's Alpha (R = 0.93, L = 0.89, I = 0.91)
 - Moderation and mediation testing via bootstrapped indirect effects
 
 ### Finding
 
-EFA revealed that Supplier Integration items cross-loaded on both Long-term Commitment and Purchasing Performance factors — a theoretically meaningful pattern reflecting genuine conceptual overlap: integration is simultaneously an expression of relational commitment and a mechanism for performance improvement. Purchasing Recognition loaded cleanly and independently, confirming its distinct antecedent role in the structural model.
+EFA revealed that Supplier Integration items cross-loaded on both Long-term Commitment and Purchasing Performance factors, a theoretically meaningful pattern reflecting genuine conceptual overlap: integration is simultaneously an expression of relational commitment and a mechanism for performance improvement. Purchasing Recognition loaded cleanly and independently, confirming its distinct antecedent role in the structural model.
 
 ---
 
-## Part 2 — Proactive Environmental Strategies and Environmental Performance
+## Part 2: Proactive Environmental Strategies and Environmental Performance
 
 ### Research Question
 
@@ -70,6 +70,6 @@ Analysis followed the standard two-step approach: measurement model assessment f
 
 ### Finding
 
-Proactive environmental strategies fully mediated the effect of both customer pressure and organizational commitment on environmental investment behavior. Firms that adopted beyond-compliance environmental practices systematically invested more in eco-design and supplier collaboration; these investments in turn significantly improved environmental performance. Direct effects of customer pressure and commitment on investment outcomes were substantially weaker, confirming that strategic posture — not pressure or intent alone — is the operative mechanism linking drivers to outcomes.
+Proactive environmental strategies fully mediated the effect of both customer pressure and organizational commitment on environmental investment behavior. Firms that adopted beyond-compliance environmental practices systematically invested more in eco-design and supplier collaboration; these investments in turn significantly improved environmental performance. Direct effects of customer pressure and commitment on investment outcomes were substantially weaker, confirming that strategic posture, not pressure or intent alone, is the operative mechanism linking drivers to outcomes.
 
 This mediation structure has direct implications for sustainable supply chain management: interventions that cultivate proactive strategic orientation are more effective than those that simply increase external pressure or signal internal commitment.
