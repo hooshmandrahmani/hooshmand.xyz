@@ -2,7 +2,7 @@
 title: "The Integrated Healthcare Timetabling Problem — A Systematic Review"
 description: "Structured literature review of 50+ papers across Patient Admission Scheduling, Surgical Case Planning, and Nurse-to-Room Assignment — mapping the field from foundational metaheuristics to modern robust and stochastic models, and establishing the methodological frontier for fully integrated planning."
 pubDate: "2025-10-15"
-category: "Optimization & Uncertainty Modelling"
+category: "Optimization & Uncertainty Modeling"
 institution: "Sabanci University"
 supervisor: "Dr. Can Akkan"
 tags: ["Literature Review", "Healthcare Scheduling", "Metaheuristics", "Robust Optimization", "IHTP"]
@@ -12,13 +12,13 @@ tags: ["Literature Review", "Healthcare Scheduling", "Metaheuristics", "Robust O
 
 Hospital operations involve a web of deeply interdependent decisions: which patients are admitted on which days, which surgeries are scheduled in which operating theaters, and which nurses are assigned to which rooms across each shift. Treating these as independent scheduling problems — the prevailing approach in both practice and earlier research — produces plans that are locally optimal in each sub-system but globally infeasible or inefficient once operational dependencies materialize.
 
-This review provides a structured synthesis of the **Integrated Healthcare Timetabling Problem (IHTP)**, defined formally for the 2024 International Healthcare Timetabling Competition (IHTC 2024), which simultaneously combines three NP-hard sub-problems. The goal is to establish where the field stands methodologically and to identify the gaps that motivate integrated modelling under uncertainty.
+This review provides a structured synthesis of the **Integrated Healthcare Timetabling Problem (IHTP)**, defined formally for the 2024 International Healthcare Timetabling Competition (IHTC 2024), which simultaneously combines three NP-hard sub-problems. The goal is to establish where the field stands methodologically and to identify the gaps that motivate integrated modeling under uncertainty.
 
 ## The Three Constituent Sub-Problems
 
 ### Patient Admission Scheduling (PAS)
 
-PAS assigns elective patients to hospital beds for the duration of their stay, subject to room capacity constraints, gender policies, specialism requirements, and patient–room compatibility. The literature begins with foundational metaheuristics — Simulated Annealing (Ceschia & Schaerf, 2011), Genetic Algorithms, Artificial Bee Colony — and progresses through exact decomposition methods (column generation with dynamic constraint aggregation; Range et al., 2014) to modern uncertainty-aware models that treat length-of-stay as a stochastic parameter rather than a fixed input (Gartner et al., 2023).
+PAS assigns elective patients to hospital beds for the duration of their stay, subject to room capacity constraints, gender policies, specialty requirements, and patient–room compatibility. The literature begins with foundational metaheuristics — Simulated Annealing (Ceschia & Schaerf, 2011), Genetic Algorithms, Artificial Bee Colony — and progresses through exact decomposition methods (column generation with dynamic constraint aggregation; Range et al., 2014) to modern uncertainty-aware models that treat length-of-stay as a stochastic parameter rather than a fixed input (Gartner et al., 2023).
 
 ### Surgical Case Planning (SCP)
 

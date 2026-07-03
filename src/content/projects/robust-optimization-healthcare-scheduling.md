@@ -2,7 +2,7 @@
 title: "Robust Optimization for Integrated Healthcare Scheduling"
 description: "Multi-resource MILP with budgeted uncertainty sets to jointly optimize surgical case planning and nurse-to-patient assignment — quantifying the Price of Robustness against surgical duration variability and nursing acuity spikes."
 pubDate: "2026-01-01"
-category: "Optimization & Uncertainty Modelling"
+category: "Optimization & Uncertainty Modeling"
 institution: "Sabanci University"
 supervisor: "Dr. Burak Gökgür"
 tags: ["MILP", "Gurobi", "Python", "Robust Optimization", "Healthcare Operations"]

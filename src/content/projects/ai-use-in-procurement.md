@@ -10,7 +10,7 @@ badge: "In Progress"
 
 ## Overview
 
-Companies everywhere are bringing artificial intelligence into their purchasing departments. Software now helps buyers analyse spending, find and evaluate suppliers, manage risk, and even negotiate. Research has followed — but almost always with one narrow question: *does adopting AI improve performance?*
+Companies everywhere are bringing artificial intelligence into their purchasing departments. Software now helps buyers analyze spending, find and evaluate suppliers, manage risk, and even negotiate. Research has followed — but almost always with one narrow question: *does adopting AI improve performance?*
 
 My current research starts from a different observation. Two companies can both say "yes, we use AI" and still be completely different. One may use AI across half of its purchasing work, deep inside strategic decisions, running autonomously. The other may only use it to sort invoices. Existing research cannot tell these two firms apart, because it measures *whether* firms adopt AI — not *how* they use it.
 
@@ -32,7 +32,7 @@ Practitioners are already debating *where* and *how deep* AI belongs — academi
 
 ## What the Project Will Do
 
-At its core is a **firm-level survey of purchasing and supply chain managers**, measuring the pattern of AI use across the procurement process and linking it to outcomes that matter: cost performance, supply chain resilience, and sustainability. The design builds on established survey research in the field — structural equation modelling, with mediation and moderation analysis — with a planned second phase using individual-level experiments on actual AI-usage behaviour.
+At its core is a **firm-level survey of purchasing and supply chain managers**, measuring the pattern of AI use across the procurement process and linking it to outcomes that matter: cost performance, supply chain resilience, and sustainability. The design builds on established survey research in the field — structural equation modeling, with mediation and moderation analysis — with a planned second phase using individual-level experiments on actual AI-usage behavior.
 
 ## Where It Stands
 

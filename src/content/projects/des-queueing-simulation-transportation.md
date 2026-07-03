@@ -2,7 +2,7 @@
 title: "Discrete-Event Simulation for Transportation System Performance Analysis"
 description: "Arena-based discrete-event simulation of a multi-stage transportation system — generating utilization profiles, queue-length distributions, and throughput sensitivity curves to identify binding bottlenecks and evaluate the system-wide impact of operational interventions."
 pubDate: "2019-01-01"
-category: "Optimization & Uncertainty Modelling"
+category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Kamran Shahanaghi"
 tags: ["Arena", "Discrete-Event Simulation", "Queueing Theory", "Bottleneck Analysis", "Transportation"]

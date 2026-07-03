@@ -2,7 +2,7 @@
 title: "Tire Closed-Loop Supply Chain Network Design under Uncertainty"
 description: "Working paper. Multi-objective MILP for designing a sustainable tire supply chain with two rounds of remanufacturing (retreading) — minimizing cost and environmental impact under stochastic demand and fuzzy return and production rates."
 pubDate: "2021-08-01"
-category: "Optimization & Uncertainty Modelling"
+category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
 tags: ["MILP", "Robust Optimization", "Stochastic Programming", "Fuzzy Programming", "Benders Decomposition", "Remanufacturing"]
@@ -46,8 +46,8 @@ Real-world tire CLSCs face fundamentally different types of uncertainty that cal
 
 | Uncertainty Type | Mathematical Treatment |
 |---|---|
-| **Market demand** | Stochastic — modelled across multiple discrete scenarios with associated probabilities |
-| **Return, remanufacturing, and recycling rates** | Fuzzy — modelled with trapezoidal membership functions capturing imprecise expert knowledge |
+| **Market demand** | Stochastic — modeled across multiple discrete scenarios with associated probabilities |
+| **Return, remanufacturing, and recycling rates** | Fuzzy — modeled with trapezoidal membership functions capturing imprecise expert knowledge |
 | **Raw material and production costs** | Fuzzy — trapezoidal numbers capturing price volatility |
 
 Combining these into a single tractable model is the technical contribution of the paper. The two uncertainty types are unified within a **Robust Fuzzy Stochastic Programming (RFSP)** framework (Farrokh et al., 2018). Fuzzy parameters are handled via credibility measures and fuzzy expected-value operators; stochastic demand is captured through scenario-based programming; and robustness is enforced by a Mulvey-type robust term (in the linearized Yu–Li form) that penalizes both scenario deviation of the objective and constraint infeasibility, controlling solution and feasibility robustness simultaneously.

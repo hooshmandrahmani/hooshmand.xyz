@@ -2,7 +2,7 @@
 title: "Large-Scale Optimization of Healthcare Logistics via Benders Decomposition"
 description: "Benders decomposition algorithm implemented in GAMS to solve a blood supply chain network design problem — exploiting the natural strategic–operational decomposition to achieve tractability on instances where monolithic MILP fails."
 pubDate: "2019-12-01"
-category: "Optimization & Uncertainty Modelling"
+category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Hadi Sahebi"
 tags: ["Benders Decomposition", "GAMS", "Blood Supply Chain", "Healthcare Logistics", "MILP"]

@@ -3,7 +3,7 @@ title: "Multi-objective Robust Optimization for Remanufacturing Systems"
 titlePrefix: "MSc Thesis"
 description: "Multi-period, multi-objective robust MILP for hybrid manufacturing and remanufacturing planning under simultaneous uncertainty in return quality, processing times, and demand — solved with NSGA-II and validated on a real industrial case."
 pubDate: "2025-09-20"
-category: "Optimization & Uncertainty Modelling"
+category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Ahmad Makui"
 tags: ["Robust Optimization", "Multi-objective", "Remanufacturing", "NSGA-II", "MILP"]
@@ -18,7 +18,7 @@ This thesis, completed at Iran University of Science and Technology under Dr. Ah
 
 ## Problem and Uncertainty
 
-A hybrid system produces both new products and remanufactured ones using the same facilities, competing for the same capacity. Three uncertainty dimensions are modelled simultaneously:
+A hybrid system produces both new products and remanufactured ones using the same facilities, competing for the same capacity. Three uncertainty dimensions are modeled simultaneously:
 
 1. **Return quality** — the condition of returned products is unknown until inspection; poor-quality returns require more reprocessing time and may be non-remanufacturable.
 2. **Processing and reprocessing times** — variability in disassembly, refurbishment, and assembly operations.
