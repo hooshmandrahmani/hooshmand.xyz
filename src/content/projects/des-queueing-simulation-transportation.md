@@ -4,7 +4,6 @@ description: "Arena-based discrete-event simulation of a multi-stage transportat
 pubDate: "2019-01-01"
 category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
-supervisor: "Dr. Kamran Shahanaghi"
 tags: ["Arena", "Discrete-Event Simulation", "Queueing Theory", "Bottleneck Analysis", "Transportation"]
 ---
 
