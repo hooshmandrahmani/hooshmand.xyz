@@ -2,7 +2,7 @@
 title: "Blockchain-Based Transparent and Sustainable Supply Chain Network Design"
 description: "Analysis of a blockchain-enabled closed-loop supply chain framework integrating IoT/RFID traceability, smart contract governance, and a multi-objective fuzzy optimization model to simultaneously balance economic, environmental, and social objectives."
 pubDate: "2025-09-15"
-category: "Machine Learning"
+category: "Optimization & Uncertainty Modeling"
 institution: "Iran University of Science and Technology"
 supervisor: "Dr. Morteza Ghomi-Avili"
 tags: ["Blockchain", "Supply Chain", "Sustainability", "RFID", "Smart Contracts", "Network Design"]
