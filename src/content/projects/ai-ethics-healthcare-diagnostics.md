@@ -1,6 +1,6 @@
 ---
 title: "AI Use in Healthcare: Ethical Framework for Diagnostic Applications"
-description: "Graduate AI-ethics project combining a six-principle ethical design framework for AI-assisted medical diagnosis with a working explainability pipeline (Grad-CAM, Integrated Gradients, LIME, and SHAP on brain-tumor MRI and stroke-CT classifiers, evaluated quantitatively against ground-truth lesion masks) and a patient-centric contestability framework at its core."
+description: "Graduate AI-ethics project combining a six-principle ethical design framework for AI-assisted medical diagnosis with a working explainability pipeline (Grad-CAM, Integrated Gradients, LIME, and SHAP on brain-tumor MRI and stroke-CT classifiers, evaluated quantitatively against ground-truth lesion masks) at its core."
 pubDate: "2026-05-18"
 category: "Machine Learning"
 institution: "Sabanci University"
@@ -18,7 +18,7 @@ This graduate project in Data and AI Ethics (Spring 2026) examined **AI-assisted
 2. An **integrated ethical design framework** built on six principles: contestability, accountability, explainability, privacy, fairness, and answerability.
 3. A **working proof-of-concept**: a medical image classification pipeline with four explainability methods, evaluated *quantitatively* against ground-truth lesion masks rather than by visual appeal alone.
 
-My focus throughout was **contestability**: designing the mechanisms through which patients and clinicians can meaningfully challenge an AI-supported decision.
+My focus throughout was **explainability**: building the layer that makes the model's reasoning inspectable, and that the other five principles depend on to be operationally meaningful.
 
 ## Why Diagnostic AI Needs More Than Accuracy
 
@@ -37,36 +37,37 @@ Regulation is catching up: the EU AI Act classifies medical-device AI as high-ri
 
 Each principle was designed in depth and then integrated into a single socio-technical system spanning data governance, model design, user interface, and dispute handling:
 
-- **Contestability**: patients and clinicians can challenge, scrutinize, and revise AI-generated decisions, operationalizing Ploug and Holm's four-domain framework (detailed below).
+- **Contestability**: patients and clinicians can challenge, scrutinize, and revise AI-generated decisions, operationalizing Ploug and Holm's four-domain framework of data, bias, performance, and decision involvement.
 - **Accountability**: an immutable, append-only audit log of every AI suggestion, clinician interaction, override, and outcome, with clear role definitions across vendor, hospital, physician, and IT.
-- **Explainability**: a layered explainable-AI stack whose outputs can be inspected and judged by domain experts.
+- **Explainability**: a layered explainable-AI stack whose outputs can be inspected and judged by domain experts (detailed below).
 - **Privacy**: differential privacy at training time, federated learning to keep raw data on premise, and de-identification of imaging metadata.
 - **Fairness**: group-level and individual-level fairness metrics with a stratified evaluation dashboard and corrective routines when subgroup error gaps exceed tolerance.
 - **Answerability**: natural-language explanation cards that translate technical outputs into clinically meaningful narratives for patients, clinicians, and auditors.
 
 The central design insight is that these principles are not independent: explainability makes contestability and accountability operationally meaningful; privacy enables fairness auditing without exposing raw data; and every principle depends on tamper-evident logging. They also conflict. Maximum explainability can leak training data, and strict privacy can degrade rare-class performance exactly where contestability matters most. The framework treats these as tunable design parameters rather than absolute commitments.
 
-## Designing for Contestability
+## Designing for Explainability
 
-Of the six principles, contestability most directly empowers the patient as a moral agent. Explainability, accountability, and fairness concern what the system can *say* about itself; contestability concerns what the patient can *do* when they disagree with what the system says. An explanation that affords no opportunity to revise the underlying decision falls short of what interpretability is meant to deliver.
+Explainability is the connective tissue of the whole framework: it is the principle that makes contestability, accountability, and answerability operationally meaningful rather than aspirational. Three considerations shaped the design.
 
-The design operationalizes Ploug and Holm's four-domain framework, which identifies the four kinds of information a patient minimally needs to mount an effective challenge: **data** (where the training data came from and how the patient's own data was handled), **bias** (documented subgroup performance and audit history), **performance** (accuracy, calibration, and out-of-distribution warnings), and **decision involvement** (whether the AI screens, triages, or supports, and where the final decision sits). The system has five components:
+First, explainability is foundational: transparency about *how* a system arrived at a decision is a precondition for the moral demands of *why* we should accept it (Coeckelbergh, 2020). Second, the other five principles reduce, in their operational form, to questions explainability can directly help answer: *Why this prediction? On what evidence? With what subgroup performance? Logged where?* Third, medical image classification is a domain where explainable AI methods have been extensively evaluated in the literature, providing a well-validated foundation to build on rather than starting from first principles.
 
-1. **Per-prediction contestability card**: a one-page, machine-readable card generated automatically for every diagnostic prediction, covering all four domains.
-2. **Clinician override with mandatory justification**: overriding the AI requires a structured, coded reason plus free-text justification, making disagreement a first-class interaction rather than a hidden option.
-3. **Patient appeal channel**: a structured pathway (second clinician re-read without AI, specialist review, audit-grade card copy) that does not require legal representation.
-4. **Tamper-evident audit log**: every prediction, override, appeal, and outcome is written to an append-only, hash-chained log, so contestation events cannot be silently rewritten.
-5. **Contestability triage classifier**: a lightweight secondary model that prioritizes appeals most likely to surface genuine model errors, keeping the appeal channel usable at scale.
+The explainability layer has four components:
 
-Deliberately, the design does not require full model transparency. Instead, it provides the *morally relevant* information needed for self-protection, delivered in layers so that time-critical clinical workflows are not delayed. I built the **contestability card module**: a Python component that consumes the explainability pipeline's outputs (saliency maps, per-prediction confidence, latest fairness audit) and produces the structured card, writing each prediction-and-card pair to the hash-chained audit log.
+1. **Backbone classifiers**: a ResNet50 fine-tuned on a brain-tumor MRI dataset and a ConvNeXt-Tiny fine-tuned on a stroke-CT corpus, providing two representative diagnostic tasks.
+2. **Post-hoc saliency methods**: Grad-CAM, Integrated Gradients, LIME, and SHAP, deployed in parallel to provide complementary perspectives: gradient-based vs. perturbation-based, coarse vs. fine resolution, model-specific vs. model-agnostic.
+3. **Quantitative localization evaluation**: saliency maps are binarized at a consistent threshold and compared against ground-truth lesion masks using Intersection over Union (IoU), addressing the central critique of XAI in healthcare: that explanations are usually assessed only qualitatively, by how convincing they look.
+4. **Clinical-explanation interface**: XAI outputs are rendered as side-by-side overlays accompanied by an answerability card summarizing the evidence the model used, its calibrated confidence, and the corresponding contestability variables.
+
+Direct beneficiaries are clinicians (verifying that the model uses clinically meaningful regions), patients (gaining the morally relevant information needed for contestation), regulators (CONSORT-AI / CLAIM compliance), and developers (debugging shortcut learning). Costs include compute (LIME and SHAP run 50–500× slower than Grad-CAM), interface complexity, and the risk of *explanation-induced over-trust*, where visually appealing heatmaps can lend false confidence even when their localization is poor.
+
+Explainability also sits in tension with the other principles: detailed explanations make model-extraction and membership-inference attacks easier, cutting against privacy; they can conflict with a vendor's reluctance to expose internals; and explanations that are too detailed overwhelm both clinicians and patients. The design addresses these trade-offs by serving *layered* explanations: a one-line plain-language summary by default, a clinician-facing saliency overlay on request, and a full audit-grade report only when needed.
 
 ## From Principles to a Running System
 
-To test whether the framework survives contact with real code, I implemented a proof-of-concept pipeline: a **ResNet50** fine-tuned on a brain-tumor MRI dataset (four classes) and a **ConvNeXt-Tiny** fine-tuned on a stroke-CT corpus, with four post-hoc explanation methods run in parallel: **Grad-CAM**, **Integrated Gradients**, **LIME**, and **SHAP**. The four were chosen to cover complementary perspectives: gradient-based vs. perturbation-based, coarse vs. fine resolution, model-specific vs. model-agnostic.
+To test whether the design survives contact with real code, I built a proof-of-concept pipeline implementing the explainability layer end to end, running all four saliency methods against the two backbone classifiers.
 
 ![Sample explanation maps on five stroke-CT test cases: input slice, ground-truth lesion mask, and the four explanation methods](/projects/xai-stroke-ct-saliency.jpg)
-
-Crucially, the explanations were evaluated **quantitatively**: each saliency map was binarized and compared against ground-truth lesion masks using Intersection over Union (IoU). This addresses the central critique that explanations in medical AI are usually assessed only by how convincing they look.
 
 ## What the Numbers Showed
 
